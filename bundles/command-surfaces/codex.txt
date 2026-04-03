@@ -1,9 +1,15 @@
 agents/codex/skills/portable-skill-loader-progressive-disclosure
 agents/codex/skills/project-root-scoped-local-skill-loading
 agents/codex/skills/memoized-command-source-aggregation
+agents/codex/skills/feature-gated-command-registry-loading
+agents/codex/skills/lazy-heavy-command-shims
 agents/codex/skills/dynamic-skill-insertion-before-builtins
 agents/codex/skills/layered-command-cache-invalidation
 agents/codex/skills/descriptive-skill-surface-admission
+agents/codex/skills/turn-zero-vs-inter-turn-skill-discovery-split
+agents/codex/skills/initial-vs-dynamic-skill-listing-batching
+agents/codex/skills/bundled-and-mcp-turn-zero-skill-filter
+agents/codex/skills/mcp-skill-vs-prompt-discovery-filtering
 agents/codex/skills/slash-command-skill-classification-filter
 agents/codex/skills/budget-aware-skill-listing-formatting
 agents/codex/skills/local-and-mcp-skill-name-deduplication

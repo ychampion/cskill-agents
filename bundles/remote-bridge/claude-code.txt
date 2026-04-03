@@ -5,3 +5,4 @@ agents/claude-code/skills/user-invocable-capability-serialization
 agents/claude-code/skills/shared-system-init-shape-parity
 agents/claude-code/skills/privacy-redacted-repl-bridge-system-init
 agents/claude-code/skills/legacy-wire-name-compat-translation
+agents/claude-code/skills/nonblocking-post-connect-capability-broadcast

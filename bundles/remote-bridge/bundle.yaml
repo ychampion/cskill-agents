@@ -9,3 +9,4 @@ skills:
   - shared-system-init-shape-parity
   - privacy-redacted-repl-bridge-system-init
   - legacy-wire-name-compat-translation
+  - nonblocking-post-connect-capability-broadcast

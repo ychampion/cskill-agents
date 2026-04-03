@@ -5,3 +5,4 @@ agents/codex/skills/user-invocable-capability-serialization
 agents/codex/skills/shared-system-init-shape-parity
 agents/codex/skills/privacy-redacted-repl-bridge-system-init
 agents/codex/skills/legacy-wire-name-compat-translation
+agents/codex/skills/nonblocking-post-connect-capability-broadcast

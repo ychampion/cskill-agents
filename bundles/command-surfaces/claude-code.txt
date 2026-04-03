@@ -1,9 +1,15 @@
 agents/claude-code/skills/portable-skill-loader-progressive-disclosure
 agents/claude-code/skills/project-root-scoped-local-skill-loading
 agents/claude-code/skills/memoized-command-source-aggregation
+agents/claude-code/skills/feature-gated-command-registry-loading
+agents/claude-code/skills/lazy-heavy-command-shims
 agents/claude-code/skills/dynamic-skill-insertion-before-builtins
 agents/claude-code/skills/layered-command-cache-invalidation
 agents/claude-code/skills/descriptive-skill-surface-admission
+agents/claude-code/skills/turn-zero-vs-inter-turn-skill-discovery-split
+agents/claude-code/skills/initial-vs-dynamic-skill-listing-batching
+agents/claude-code/skills/bundled-and-mcp-turn-zero-skill-filter
+agents/claude-code/skills/mcp-skill-vs-prompt-discovery-filtering
 agents/claude-code/skills/slash-command-skill-classification-filter
 agents/claude-code/skills/budget-aware-skill-listing-formatting
 agents/claude-code/skills/local-and-mcp-skill-name-deduplication

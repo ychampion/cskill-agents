@@ -1,0 +1,24 @@
+slug: built-in-agent-feature-gating
+name: "Built-In Agent Feature Gating"
+summary: "Expose built-in agents according to entrypoint, mode, and feature flags so each runtime gets the right built-in surface."
+when_to_use: "Use when built-in agent registration should differ across CLI, SDK, coordinator, or experiment-enabled entrypoints."
+category: multi-agent
+maturity: recommended
+tags:
+  - multi-agent
+  - agent-runtime
+  - feature-gating
+bundles:
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/built-in-agent-feature-gating/SKILL.md
+  codex: agents/codex/skills/built-in-agent-feature-gating/SKILL.md
+  claude_code: agents/claude-code/skills/built-in-agent-feature-gating/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

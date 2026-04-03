@@ -1,11 +1,16 @@
 agents/codex/skills/additive-agent-tool-surface-construction
 agents/codex/skills/agent-specific-mcp-server-initialization
+agents/codex/skills/namespace-resolved-skill-preloading
+agents/codex/skills/plugin-only-agent-surface-gating
+agents/codex/skills/built-in-agent-feature-gating
 agents/codex/skills/cache-prefix-stability-for-subagents
 agents/codex/skills/cache-identical-fork-prefix-construction
 agents/codex/skills/permission-overlay-inheritance
 agents/codex/skills/fork-child-directive-guardrails
 agents/codex/skills/lifecycle-scoped-resource-cleanup
 agents/codex/skills/forked-skill-execution-with-isolated-context
+agents/codex/skills/forked-auto-memory-extraction
 agents/codex/skills/append-only-sidechain-transcripts
+agents/codex/skills/subagent-metrics-bridging
 agents/codex/skills/trusted-frontmatter-gating
 agents/codex/skills/orphaned-tool-call-sanitizer

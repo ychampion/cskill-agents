@@ -1,0 +1,24 @@
+slug: initial-vs-dynamic-skill-listing-batching
+name: "Initial-vs-Dynamic Skill Listing Batching"
+summary: "Mark first-time skill listings differently from later deltas so consumers can treat bootstrap exposure and updates separately."
+when_to_use: "Use when a skill listing stream must distinguish the first full exposure from later incremental updates."
+category: command-surfaces
+maturity: recommended
+tags:
+  - command-surfaces
+  - skill-listing
+  - agent-runtime
+bundles:
+  - command-surfaces
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/initial-vs-dynamic-skill-listing-batching/SKILL.md
+  codex: agents/codex/skills/initial-vs-dynamic-skill-listing-batching/SKILL.md
+  claude_code: agents/claude-code/skills/initial-vs-dynamic-skill-listing-batching/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: command-surfaces
+  review_status: curated

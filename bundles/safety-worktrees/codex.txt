@@ -7,3 +7,4 @@ agents/codex/skills/declarative-read-only-command-allowlists
 agents/codex/skills/cross-shell-command-safety-maps
 agents/codex/skills/remote-safe-command-allowlist
 agents/codex/skills/auto-memory-tool-permission-fencing
+agents/codex/skills/plan-mode-permission-gating

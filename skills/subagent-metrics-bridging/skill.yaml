@@ -1,0 +1,24 @@
+slug: subagent-metrics-bridging
+name: "Subagent Metrics Bridging"
+summary: "Connect async subagent streams to progress UI, analytics, and notifications from one finalized lifecycle snapshot."
+when_to_use: "Use when background or async subagents must report progress, token usage, completion, and partial results back to the host runtime."
+category: multi-agent
+maturity: recommended
+tags:
+  - multi-agent
+  - analytics
+  - agent-runtime
+bundles:
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/subagent-metrics-bridging/SKILL.md
+  codex: agents/codex/skills/subagent-metrics-bridging/SKILL.md
+  claude_code: agents/claude-code/skills/subagent-metrics-bridging/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

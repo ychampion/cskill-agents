@@ -1,0 +1,24 @@
+slug: namespace-resolved-skill-preloading
+name: "Namespace-Resolved Skill Preloading"
+summary: "Resolve startup skill names through layered namespace lookup before preloading them as explicit visible context."
+when_to_use: "Use when agent definitions preload startup skills by friendly name but the registry may store them under namespaced or plugin-qualified identifiers."
+category: multi-agent
+maturity: recommended
+tags:
+  - multi-agent
+  - skill-loading
+  - agent-runtime
+bundles:
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/namespace-resolved-skill-preloading/SKILL.md
+  codex: agents/codex/skills/namespace-resolved-skill-preloading/SKILL.md
+  claude_code: agents/claude-code/skills/namespace-resolved-skill-preloading/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

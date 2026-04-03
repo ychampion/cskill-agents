@@ -1,0 +1,24 @@
+slug: nonblocking-post-connect-capability-broadcast
+name: "Nonblocking Post-Connect Capability Broadcast"
+summary: "Mark bridge sessions ready first, then send optional capability metadata asynchronously without delaying readiness."
+when_to_use: "Use when a remote bridge or transport should become usable immediately while optional capability discovery continues in the background."
+category: remote-bridge
+maturity: recommended
+tags:
+  - remote-bridge
+  - bridge-lifecycle
+  - agent-runtime
+bundles:
+  - remote-bridge
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/nonblocking-post-connect-capability-broadcast/SKILL.md
+  codex: agents/codex/skills/nonblocking-post-connect-capability-broadcast/SKILL.md
+  claude_code: agents/claude-code/skills/nonblocking-post-connect-capability-broadcast/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: remote-bridge
+  review_status: curated

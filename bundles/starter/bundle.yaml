@@ -5,9 +5,12 @@ skills:
   - portable-skill-loader-progressive-disclosure
   - project-root-scoped-local-skill-loading
   - memoized-command-source-aggregation
+  - feature-gated-command-registry-loading
+  - lazy-heavy-command-shims
   - dynamic-skill-insertion-before-builtins
   - layered-command-cache-invalidation
   - descriptive-skill-surface-admission
+  - bundled-and-mcp-turn-zero-skill-filter
   - concurrency-safe-tool-batching
   - ordered-streaming-tool-execution
   - progress-first-tool-emission
@@ -16,14 +19,18 @@ skills:
   - conversation-engine-persistent-session-state
   - api-round-message-grouping
   - autocompact-circuit-breaker
+  - largest-first-context-shedding
   - reserved-summary-output-budget
   - token-budgeted-compaction-with-reinjection
   - turn-scoped-memory-prefetch-with-disposal
+  - session-memory-first-compaction
   - additive-agent-tool-surface-construction
   - permission-overlay-inheritance
+  - forked-auto-memory-extraction
   - lifecycle-scoped-resource-cleanup
   - fast-worktree-reuse-with-head-pointer-checks
   - declarative-read-only-command-allowlists
+  - plan-mode-permission-gating
   - remote-safe-command-allowlist
   - bridge-origin-safe-slash-override
   - shared-system-init-shape-parity

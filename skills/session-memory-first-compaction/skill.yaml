@@ -1,0 +1,25 @@
+slug: session-memory-first-compaction
+name: "Session Memory First Compaction"
+summary: "Try lightweight session-memory summaries before falling back to heavyweight full-conversation compaction."
+when_to_use: "Use when auto-compaction has access to cached session summaries that can often replace a full transcript compaction pass."
+category: context-management
+maturity: core
+tags:
+  - context-management
+  - compaction
+  - starter
+bundles:
+  - starter
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/session-memory-first-compaction/SKILL.md
+  codex: agents/codex/skills/session-memory-first-compaction/SKILL.md
+  claude_code: agents/claude-code/skills/session-memory-first-compaction/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated

@@ -62,8 +62,8 @@ Install a curated bundle with the helper script:
 
 ## Included Skills
 
-- 67 curated skills
-- 29 starter skills
+- 84 curated skills
+- 36 starter skills
 - 9 curated bundles
 
 Start with:

@@ -4,12 +4,17 @@ description: "Subagent tool surfaces, fork control, lifecycle cleanup, and isola
 skills:
   - additive-agent-tool-surface-construction
   - agent-specific-mcp-server-initialization
+  - namespace-resolved-skill-preloading
+  - plugin-only-agent-surface-gating
+  - built-in-agent-feature-gating
   - cache-prefix-stability-for-subagents
   - cache-identical-fork-prefix-construction
   - permission-overlay-inheritance
   - fork-child-directive-guardrails
   - lifecycle-scoped-resource-cleanup
   - forked-skill-execution-with-isolated-context
+  - forked-auto-memory-extraction
   - append-only-sidechain-transcripts
+  - subagent-metrics-bridging
   - trusted-frontmatter-gating
   - orphaned-tool-call-sanitizer

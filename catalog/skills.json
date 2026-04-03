@@ -1,5 +1,320 @@
 [
   {
+    "slug": "budget-aware-skill-listing-formatting",
+    "name": "Budget-Aware Skill Listing Formatting",
+    "summary": "Derive the active model context budget at runtime and format skill listings to fit it instead of emitting raw command sets.",
+    "when_to_use": "Apply when a skill or command listing must fit the active model's real context budget instead of assuming a fixed token allowance.",
+    "category": "command-surfaces",
+    "tags": [
+      "command-surfaces",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "command-surfaces"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/budget-aware-skill-listing-formatting/SKILL.md",
+      "codex": "agents/codex/skills/budget-aware-skill-listing-formatting/SKILL.md",
+      "claude_code": "agents/claude-code/skills/budget-aware-skill-listing-formatting/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "command-surfaces",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "bundled-and-mcp-turn-zero-skill-filter",
+    "name": "Bundled-and-MCP Turn-Zero Skill Filter",
+    "summary": "Shrink first-turn skill listings to bundled and MCP-backed high-signal sources, with a deterministic bundled-only fallback if still too large.",
+    "when_to_use": "Use when turn-zero skill listings must stay inside a tight prompt budget without losing the most useful high-signal skills.",
+    "category": "command-surfaces",
+    "tags": [
+      "command-surfaces",
+      "skill-listing",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "command-surfaces"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/bundled-and-mcp-turn-zero-skill-filter/SKILL.md",
+      "codex": "agents/codex/skills/bundled-and-mcp-turn-zero-skill-filter/SKILL.md",
+      "claude_code": "agents/claude-code/skills/bundled-and-mcp-turn-zero-skill-filter/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "command-surfaces",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "descriptive-skill-surface-admission",
+    "name": "Descriptive Skill Surface Admission",
+    "summary": "Use source-aware admission rules so trusted local skills can surface automatically while plugin or MCP-provided entries must supply explicit descriptive metadata.",
+    "when_to_use": "Use when a command or skill catalog mixes trusted local sources with external providers and you need a predictable rule for which entries may appear without manual curation.",
+    "category": "command-surfaces",
+    "tags": [
+      "command-surfaces",
+      "agent-runtime",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "command-surfaces"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/descriptive-skill-surface-admission/SKILL.md",
+      "codex": "agents/codex/skills/descriptive-skill-surface-admission/SKILL.md",
+      "claude_code": "agents/claude-code/skills/descriptive-skill-surface-admission/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "command-surfaces",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "dynamic-skill-insertion-before-builtins",
+    "name": "Dynamic Skill Insertion Before Builtins",
+    "summary": "Merge runtime-discovered commands into an existing command registry by deduping them against the enabled base surface and inserting them at a stable boundary before built-in commands.",
+    "when_to_use": "Use when commands can be discovered at runtime and must be added to a prebuilt command list without duplicating enabled entries or scrambling the established built-in ordering.",
+    "category": "command-surfaces",
+    "tags": [
+      "command-surfaces",
+      "agent-runtime",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "command-surfaces"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/dynamic-skill-insertion-before-builtins/SKILL.md",
+      "codex": "agents/codex/skills/dynamic-skill-insertion-before-builtins/SKILL.md",
+      "claude_code": "agents/claude-code/skills/dynamic-skill-insertion-before-builtins/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "command-surfaces",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "feature-gated-command-registry-loading",
+    "name": "Feature-Gated Command Registry Loading",
+    "summary": "Gate optional command modules behind lazy feature checks so disabled features do not inflate startup or registry cost.",
+    "when_to_use": "Use when a command registry must expose optional commands without importing their modules unless the related feature is enabled.",
+    "category": "command-surfaces",
+    "tags": [
+      "command-surfaces",
+      "agent-runtime",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "command-surfaces"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/feature-gated-command-registry-loading/SKILL.md",
+      "codex": "agents/codex/skills/feature-gated-command-registry-loading/SKILL.md",
+      "claude_code": "agents/claude-code/skills/feature-gated-command-registry-loading/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "command-surfaces",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "initial-vs-dynamic-skill-listing-batching",
+    "name": "Initial-vs-Dynamic Skill Listing Batching",
+    "summary": "Mark first-time skill listings differently from later deltas so consumers can treat bootstrap exposure and updates separately.",
+    "when_to_use": "Use when a skill listing stream must distinguish the first full exposure from later incremental updates.",
+    "category": "command-surfaces",
+    "tags": [
+      "command-surfaces",
+      "skill-listing",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "command-surfaces"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/initial-vs-dynamic-skill-listing-batching/SKILL.md",
+      "codex": "agents/codex/skills/initial-vs-dynamic-skill-listing-batching/SKILL.md",
+      "claude_code": "agents/claude-code/skills/initial-vs-dynamic-skill-listing-batching/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "command-surfaces",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "layered-command-cache-invalidation",
+    "name": "Layered Command Cache Invalidation",
+    "summary": "Clear every memoized layer in a command or skill pipeline so dynamic updates invalidate outer derived views as well as inner source caches.",
+    "when_to_use": "Use when commands, skills, or search indexes are cached in layers and a refresh must make newly added or removed entries visible immediately.",
+    "category": "command-surfaces",
+    "tags": [
+      "command-surfaces",
+      "agent-runtime",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "command-surfaces"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/layered-command-cache-invalidation/SKILL.md",
+      "codex": "agents/codex/skills/layered-command-cache-invalidation/SKILL.md",
+      "claude_code": "agents/claude-code/skills/layered-command-cache-invalidation/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "command-surfaces",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "lazy-heavy-command-shims",
+    "name": "Lazy Heavy Command Shims",
+    "summary": "Keep heavyweight commands discoverable through lightweight shims that import the real implementation only on execution.",
+    "when_to_use": "Use when command metadata should stay visible at startup but the real command implementation is too heavy to load eagerly.",
+    "category": "command-surfaces",
+    "tags": [
+      "command-surfaces",
+      "performance",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "command-surfaces"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/lazy-heavy-command-shims/SKILL.md",
+      "codex": "agents/codex/skills/lazy-heavy-command-shims/SKILL.md",
+      "claude_code": "agents/claude-code/skills/lazy-heavy-command-shims/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "command-surfaces",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "local-and-mcp-skill-name-deduplication",
+    "name": "Local-and-MCP Skill Name Deduplication",
+    "summary": "Merge local and MCP skill sources into one listing surface and dedupe by stable command name before announcing them.",
+    "when_to_use": "Apply when a listing surface combines commands from multiple registries or providers and must avoid announcing the same user-facing capability twice.",
+    "category": "command-surfaces",
+    "tags": [
+      "command-surfaces",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "command-surfaces"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/local-and-mcp-skill-name-deduplication/SKILL.md",
+      "codex": "agents/codex/skills/local-and-mcp-skill-name-deduplication/SKILL.md",
+      "claude_code": "agents/claude-code/skills/local-and-mcp-skill-name-deduplication/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "command-surfaces",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "memoized-command-source-aggregation",
+    "name": "Memoized Command Source Aggregation",
+    "summary": "Load independent command sources in parallel, then memoize the merged registry by cwd so repeated lookups stay cheap and ordered.",
+    "when_to_use": "Use when a command or skill registry must combine several expensive sources, but repeated lookups from the same workspace should reuse one stable merged result.",
+    "category": "command-surfaces",
+    "tags": [
+      "command-surfaces",
+      "agent-runtime",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "command-surfaces"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/memoized-command-source-aggregation/SKILL.md",
+      "codex": "agents/codex/skills/memoized-command-source-aggregation/SKILL.md",
+      "claude_code": "agents/claude-code/skills/memoized-command-source-aggregation/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "command-surfaces",
+      "review_status": "curated"
+    }
+  },
+  {
     "slug": "portable-skill-loader-progressive-disclosure",
     "name": "Portable Skill Loader Progressive Disclosure",
     "summary": "Keep the universal skill compact yet discoverable by loading minimal frontmatter first and heavy content on demand.",
@@ -64,134 +379,6 @@
     }
   },
   {
-    "slug": "memoized-command-source-aggregation",
-    "name": "Memoized Command Source Aggregation",
-    "summary": "Load independent command sources in parallel, then memoize the merged registry by cwd so repeated lookups stay cheap and ordered.",
-    "when_to_use": "Use when a command or skill registry must combine several expensive sources, but repeated lookups from the same workspace should reuse one stable merged result.",
-    "category": "command-surfaces",
-    "tags": [
-      "command-surfaces",
-      "agent-runtime",
-      "starter"
-    ],
-    "maturity": "core",
-    "bundles": [
-      "starter",
-      "command-surfaces"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/memoized-command-source-aggregation/SKILL.md",
-      "codex": "agents/codex/skills/memoized-command-source-aggregation/SKILL.md",
-      "claude_code": "agents/claude-code/skills/memoized-command-source-aggregation/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "command-surfaces",
-      "review_status": "curated"
-    }
-  },
-  {
-    "slug": "dynamic-skill-insertion-before-builtins",
-    "name": "Dynamic Skill Insertion Before Builtins",
-    "summary": "Merge runtime-discovered commands into an existing command registry by deduping them against the enabled base surface and inserting them at a stable boundary before built-in commands.",
-    "when_to_use": "Use when commands can be discovered at runtime and must be added to a prebuilt command list without duplicating enabled entries or scrambling the established built-in ordering.",
-    "category": "command-surfaces",
-    "tags": [
-      "command-surfaces",
-      "agent-runtime",
-      "starter"
-    ],
-    "maturity": "core",
-    "bundles": [
-      "starter",
-      "command-surfaces"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/dynamic-skill-insertion-before-builtins/SKILL.md",
-      "codex": "agents/codex/skills/dynamic-skill-insertion-before-builtins/SKILL.md",
-      "claude_code": "agents/claude-code/skills/dynamic-skill-insertion-before-builtins/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "command-surfaces",
-      "review_status": "curated"
-    }
-  },
-  {
-    "slug": "layered-command-cache-invalidation",
-    "name": "Layered Command Cache Invalidation",
-    "summary": "Clear every memoized layer in a command or skill pipeline so dynamic updates invalidate outer derived views as well as inner source caches.",
-    "when_to_use": "Use when commands, skills, or search indexes are cached in layers and a refresh must make newly added or removed entries visible immediately.",
-    "category": "command-surfaces",
-    "tags": [
-      "command-surfaces",
-      "agent-runtime",
-      "starter"
-    ],
-    "maturity": "core",
-    "bundles": [
-      "starter",
-      "command-surfaces"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/layered-command-cache-invalidation/SKILL.md",
-      "codex": "agents/codex/skills/layered-command-cache-invalidation/SKILL.md",
-      "claude_code": "agents/claude-code/skills/layered-command-cache-invalidation/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "command-surfaces",
-      "review_status": "curated"
-    }
-  },
-  {
-    "slug": "descriptive-skill-surface-admission",
-    "name": "Descriptive Skill Surface Admission",
-    "summary": "Use source-aware admission rules so trusted local skills can surface automatically while plugin or MCP-provided entries must supply explicit descriptive metadata.",
-    "when_to_use": "Use when a command or skill catalog mixes trusted local sources with external providers and you need a predictable rule for which entries may appear without manual curation.",
-    "category": "command-surfaces",
-    "tags": [
-      "command-surfaces",
-      "agent-runtime",
-      "starter"
-    ],
-    "maturity": "core",
-    "bundles": [
-      "starter",
-      "command-surfaces"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/descriptive-skill-surface-admission/SKILL.md",
-      "codex": "agents/codex/skills/descriptive-skill-surface-admission/SKILL.md",
-      "claude_code": "agents/claude-code/skills/descriptive-skill-surface-admission/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "command-surfaces",
-      "review_status": "curated"
-    }
-  },
-  {
     "slug": "slash-command-skill-classification-filter",
     "name": "Slash-Command Skill Classification Filter",
     "summary": "Derive a slash-command skill surface from a broader prompt-command registry by requiring descriptive metadata, excluding builtins, and admitting only a controlled set of origins plus explicit user-only commands.",
@@ -222,14 +409,15 @@
     }
   },
   {
-    "slug": "budget-aware-skill-listing-formatting",
-    "name": "Budget-Aware Skill Listing Formatting",
-    "summary": "Derive the active model context budget at runtime and format skill listings to fit it instead of emitting raw command sets.",
-    "when_to_use": "Apply when a skill or command listing must fit the active model's real context budget instead of assuming a fixed token allowance.",
+    "slug": "turn-zero-vs-inter-turn-skill-discovery-split",
+    "name": "Turn-Zero vs Inter-Turn Skill Discovery Split",
+    "summary": "Block only the first discovery pass, then overlap later discovery with tool execution so streaming turns stay responsive.",
+    "when_to_use": "Use when first-turn skill discovery must be accurate but repeated blocking discovery would slow every later turn.",
     "category": "command-surfaces",
     "tags": [
       "command-surfaces",
-      "agent-runtime"
+      "skill-discovery",
+      "latency"
     ],
     "maturity": "recommended",
     "bundles": [
@@ -241,9 +429,9 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/budget-aware-skill-listing-formatting/SKILL.md",
-      "codex": "agents/codex/skills/budget-aware-skill-listing-formatting/SKILL.md",
-      "claude_code": "agents/claude-code/skills/budget-aware-skill-listing-formatting/SKILL.md"
+      "universal": "skills/turn-zero-vs-inter-turn-skill-discovery-split/SKILL.md",
+      "codex": "agents/codex/skills/turn-zero-vs-inter-turn-skill-discovery-split/SKILL.md",
+      "claude_code": "agents/claude-code/skills/turn-zero-vs-inter-turn-skill-discovery-split/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -252,18 +440,18 @@
     }
   },
   {
-    "slug": "local-and-mcp-skill-name-deduplication",
-    "name": "Local-and-MCP Skill Name Deduplication",
-    "summary": "Merge local and MCP skill sources into one listing surface and dedupe by stable command name before announcing them.",
-    "when_to_use": "Apply when a listing surface combines commands from multiple registries or providers and must avoid announcing the same user-facing capability twice.",
-    "category": "command-surfaces",
+    "slug": "capability-pool-resolution",
+    "name": "Capability Pool Resolution",
+    "summary": "Resolve an agent\u2019s tool intent and disallowed lists into the actual pool the agent can use, honoring wildcard, async, and teammate allowances.",
+    "when_to_use": "Apply this pattern when an agent declares requested tools/disallowedTools and you must compute the exact capabilities available to that agent thread.",
+    "category": "tool-orchestration",
     "tags": [
-      "command-surfaces",
+      "tool-orchestration",
       "agent-runtime"
     ],
     "maturity": "recommended",
     "bundles": [
-      "command-surfaces"
+      "tool-orchestration"
     ],
     "targets": [
       "universal",
@@ -271,13 +459,43 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/local-and-mcp-skill-name-deduplication/SKILL.md",
-      "codex": "agents/codex/skills/local-and-mcp-skill-name-deduplication/SKILL.md",
-      "claude_code": "agents/claude-code/skills/local-and-mcp-skill-name-deduplication/SKILL.md"
+      "universal": "skills/capability-pool-resolution/SKILL.md",
+      "codex": "agents/codex/skills/capability-pool-resolution/SKILL.md",
+      "claude_code": "agents/claude-code/skills/capability-pool-resolution/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
-      "pattern_family": "command-surfaces",
+      "pattern_family": "tool-orchestration",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "circular-safe-tool-registry-loading",
+    "name": "Circular-Safe Tool Registry Loading",
+    "summary": "Safely assemble the tool registry when optional tools have circular dependencies or heavy side effects.",
+    "when_to_use": "Use when tools reference each other (e.g., `TeamCreateTool` \u2194 `tools.ts`) or only exist under feature flags, and you still need a single exhaustive registry.",
+    "category": "tool-orchestration",
+    "tags": [
+      "tool-orchestration",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "tool-orchestration"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/circular-safe-tool-registry-loading/SKILL.md",
+      "codex": "agents/codex/skills/circular-safe-tool-registry-loading/SKILL.md",
+      "claude_code": "agents/claude-code/skills/circular-safe-tool-registry-loading/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "tool-orchestration",
       "review_status": "curated"
     }
   },
@@ -306,6 +524,98 @@
       "universal": "skills/concurrency-safe-tool-batching/SKILL.md",
       "codex": "agents/codex/skills/concurrency-safe-tool-batching/SKILL.md",
       "claude_code": "agents/claude-code/skills/concurrency-safe-tool-batching/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "tool-orchestration",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "decision-fate-freezing",
+    "name": "Decision Fate Freezing",
+    "summary": "Freeze each tool result ID's replacement fate after it is observed so budget decisions stay deterministic across turns and forks.",
+    "when_to_use": "Apply when the message-level replacement budget runs and you need previously seen tool results to keep the same fate (persisted preview vs full content) even after resumes, forks, or cached prompts.",
+    "category": "tool-orchestration",
+    "tags": [
+      "tool-orchestration",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "tool-orchestration"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/decision-fate-freezing/SKILL.md",
+      "codex": "agents/codex/skills/decision-fate-freezing/SKILL.md",
+      "claude_code": "agents/claude-code/skills/decision-fate-freezing/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "tool-orchestration",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "idempotent-tool-result-persistence",
+    "name": "Idempotent Tool Result Persistence",
+    "summary": "Persist tool results once, avoid re-writing duplicates, and summarize via previews so long outputs stay accessible yet capped.",
+    "when_to_use": "Use this when tool result blocks exceed their configured thresholds and you want to persist them once while still returning a preview.",
+    "category": "tool-orchestration",
+    "tags": [
+      "tool-orchestration",
+      "agent-runtime",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "tool-orchestration"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/idempotent-tool-result-persistence/SKILL.md",
+      "codex": "agents/codex/skills/idempotent-tool-result-persistence/SKILL.md",
+      "claude_code": "agents/claude-code/skills/idempotent-tool-result-persistence/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "tool-orchestration",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "modality-preserving-binary-offload",
+    "name": "Modality-Preserving Binary Offload",
+    "summary": "Persist binary output with a mime-derived extension and a matching saved-file message so downstream tools keep the right modality.",
+    "when_to_use": "Apply when a tool emits binary content that must be saved out of band without losing the file type or downstream usability.",
+    "category": "tool-orchestration",
+    "tags": [
+      "tool-orchestration",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "tool-orchestration"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/modality-preserving-binary-offload/SKILL.md",
+      "codex": "agents/codex/skills/modality-preserving-binary-offload/SKILL.md",
+      "claude_code": "agents/claude-code/skills/modality-preserving-binary-offload/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -378,66 +688,6 @@
     }
   },
   {
-    "slug": "circular-safe-tool-registry-loading",
-    "name": "Circular-Safe Tool Registry Loading",
-    "summary": "Safely assemble the tool registry when optional tools have circular dependencies or heavy side effects.",
-    "when_to_use": "Use when tools reference each other (e.g., `TeamCreateTool` ↔ `tools.ts`) or only exist under feature flags, and you still need a single exhaustive registry.",
-    "category": "tool-orchestration",
-    "tags": [
-      "tool-orchestration",
-      "agent-runtime"
-    ],
-    "maturity": "recommended",
-    "bundles": [
-      "tool-orchestration"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/circular-safe-tool-registry-loading/SKILL.md",
-      "codex": "agents/codex/skills/circular-safe-tool-registry-loading/SKILL.md",
-      "claude_code": "agents/claude-code/skills/circular-safe-tool-registry-loading/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "tool-orchestration",
-      "review_status": "curated"
-    }
-  },
-  {
-    "slug": "capability-pool-resolution",
-    "name": "Capability Pool Resolution",
-    "summary": "Resolve an agent’s tool intent and disallowed lists into the actual pool the agent can use, honoring wildcard, async, and teammate allowances.",
-    "when_to_use": "Apply this pattern when an agent declares requested tools/disallowedTools and you must compute the exact capabilities available to that agent thread.",
-    "category": "tool-orchestration",
-    "tags": [
-      "tool-orchestration",
-      "agent-runtime"
-    ],
-    "maturity": "recommended",
-    "bundles": [
-      "tool-orchestration"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/capability-pool-resolution/SKILL.md",
-      "codex": "agents/codex/skills/capability-pool-resolution/SKILL.md",
-      "claude_code": "agents/claude-code/skills/capability-pool-resolution/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "tool-orchestration",
-      "review_status": "curated"
-    }
-  },
-  {
     "slug": "required-argument-aware-flag-validation",
     "name": "Required Argument Aware Flag Validation",
     "summary": "Walk command tokens while inspecting attached/inline arguments so validators never skip missing or dangerous flag values.",
@@ -470,102 +720,10 @@
     }
   },
   {
-    "slug": "idempotent-tool-result-persistence",
-    "name": "Idempotent Tool Result Persistence",
-    "summary": "Persist tool results once, avoid re-writing duplicates, and summarize via previews so long outputs stay accessible yet capped.",
-    "when_to_use": "Use this when tool result blocks exceed their configured thresholds and you want to persist them once while still returning a preview.",
-    "category": "tool-orchestration",
-    "tags": [
-      "tool-orchestration",
-      "agent-runtime",
-      "starter"
-    ],
-    "maturity": "core",
-    "bundles": [
-      "starter",
-      "tool-orchestration"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/idempotent-tool-result-persistence/SKILL.md",
-      "codex": "agents/codex/skills/idempotent-tool-result-persistence/SKILL.md",
-      "claude_code": "agents/claude-code/skills/idempotent-tool-result-persistence/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "tool-orchestration",
-      "review_status": "curated"
-    }
-  },
-  {
-    "slug": "modality-preserving-binary-offload",
-    "name": "Modality-Preserving Binary Offload",
-    "summary": "Persist binary output with a mime-derived extension and a matching saved-file message so downstream tools keep the right modality.",
-    "when_to_use": "Apply when a tool emits binary content that must be saved out of band without losing the file type or downstream usability.",
-    "category": "tool-orchestration",
-    "tags": [
-      "tool-orchestration",
-      "agent-runtime"
-    ],
-    "maturity": "recommended",
-    "bundles": [
-      "tool-orchestration"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/modality-preserving-binary-offload/SKILL.md",
-      "codex": "agents/codex/skills/modality-preserving-binary-offload/SKILL.md",
-      "claude_code": "agents/claude-code/skills/modality-preserving-binary-offload/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "tool-orchestration",
-      "review_status": "curated"
-    }
-  },
-  {
-    "slug": "wire-shape-aligned-budgeting",
-    "name": "Wire-Shape Aligned Budgeting",
-    "summary": "Keep each wire message’s aggregate tool_result size within the configured budget by compacting the largest fresh results first.",
-    "when_to_use": "Apply this when building user messages that include multiple `tool_result` blocks to ensure the total stays under `MAX_TOOL_RESULTS_PER_MESSAGE_CHARS` before the API call.",
-    "category": "tool-orchestration",
-    "tags": [
-      "tool-orchestration",
-      "agent-runtime"
-    ],
-    "maturity": "recommended",
-    "bundles": [
-      "tool-orchestration"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/wire-shape-aligned-budgeting/SKILL.md",
-      "codex": "agents/codex/skills/wire-shape-aligned-budgeting/SKILL.md",
-      "claude_code": "agents/claude-code/skills/wire-shape-aligned-budgeting/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "tool-orchestration",
-      "review_status": "curated"
-    }
-  },
-  {
     "slug": "tail-preserving-task-output-truncation",
     "name": "Tail-Preserving Task Output Truncation",
     "summary": "Persist tool outputs alongside metadata and truncate only the preview, ensuring the header points back to the persisted replica.",
-    "when_to_use": "Use this when a task produces output larger than the session’s configured limit and you need to keep a concise preview plus a persistent archive.",
+    "when_to_use": "Use this when a task produces output larger than the session\u2019s configured limit and you need to keep a concise preview plus a persistent archive.",
     "category": "tool-orchestration",
     "tags": [
       "tool-orchestration",
@@ -592,10 +750,10 @@
     }
   },
   {
-    "slug": "decision-fate-freezing",
-    "name": "Decision Fate Freezing",
-    "summary": "Freeze each tool result ID's replacement fate after it is observed so budget decisions stay deterministic across turns and forks.",
-    "when_to_use": "Apply when the message-level replacement budget runs and you need previously seen tool results to keep the same fate (persisted preview vs full content) even after resumes, forks, or cached prompts.",
+    "slug": "wire-shape-aligned-budgeting",
+    "name": "Wire-Shape Aligned Budgeting",
+    "summary": "Keep each wire message\u2019s aggregate tool_result size within the configured budget by compacting the largest fresh results first.",
+    "when_to_use": "Apply this when building user messages that include multiple `tool_result` blocks to ensure the total stays under `MAX_TOOL_RESULTS_PER_MESSAGE_CHARS` before the API call.",
     "category": "tool-orchestration",
     "tags": [
       "tool-orchestration",
@@ -611,45 +769,13 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/decision-fate-freezing/SKILL.md",
-      "codex": "agents/codex/skills/decision-fate-freezing/SKILL.md",
-      "claude_code": "agents/claude-code/skills/decision-fate-freezing/SKILL.md"
+      "universal": "skills/wire-shape-aligned-budgeting/SKILL.md",
+      "codex": "agents/codex/skills/wire-shape-aligned-budgeting/SKILL.md",
+      "claude_code": "agents/claude-code/skills/wire-shape-aligned-budgeting/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
       "pattern_family": "tool-orchestration",
-      "review_status": "curated"
-    }
-  },
-  {
-    "slug": "conversation-engine-persistent-session-state",
-    "name": "Conversation Engine Persistent Session State",
-    "summary": "Keep session-level signals (messages, read caches, memory loads) alive across turns while letting per-turn caches reset for correctness.",
-    "when_to_use": "Apply when architecting a conversation engine that must persist session context while allowing per-turn caches and abort controllers to restart cleanly.",
-    "category": "context-management",
-    "tags": [
-      "context-management",
-      "agent-runtime",
-      "starter"
-    ],
-    "maturity": "core",
-    "bundles": [
-      "starter",
-      "context-management"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/conversation-engine-persistent-session-state/SKILL.md",
-      "codex": "agents/codex/skills/conversation-engine-persistent-session-state/SKILL.md",
-      "claude_code": "agents/claude-code/skills/conversation-engine-persistent-session-state/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "context-management",
       "review_status": "curated"
     }
   },
@@ -750,7 +876,7 @@
   {
     "slug": "autocompact-recursion-guards",
     "name": "Autocompact Recursion Guards",
-    "summary": "Block autocompact from running in recursive contexts so forks and helpers don’t deadlock.",
+    "summary": "Block autocompact from running in recursive contexts so forks and helpers don\u2019t deadlock.",
     "when_to_use": "Apply when auto-compacting logic runs inside recursive agents (session memory, compact helpers, context collapse) and must avoid deadlocking by re-entering itself.",
     "category": "context-management",
     "tags": [
@@ -770,6 +896,192 @@
       "universal": "skills/autocompact-recursion-guards/SKILL.md",
       "codex": "agents/codex/skills/autocompact-recursion-guards/SKILL.md",
       "claude_code": "agents/claude-code/skills/autocompact-recursion-guards/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "context-management",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "cache-edit-pin-and-replay",
+    "name": "Cache Edit Pin and Replay",
+    "summary": "Queue cache edits once, pin them to message positions, and replay them across turns instead of regenerating them on every retry.",
+    "when_to_use": "Use when cache-editing or microcompact flows must preserve deletion edits across retries, resumes, or later turns.",
+    "category": "context-management",
+    "tags": [
+      "context-management",
+      "cache-editing",
+      "agent-runtime"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "context-management"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/cache-edit-pin-and-replay/SKILL.md",
+      "codex": "agents/codex/skills/cache-edit-pin-and-replay/SKILL.md",
+      "claude_code": "agents/claude-code/skills/cache-edit-pin-and-replay/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "context-management",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "compactable-tool-whitelist-gating",
+    "name": "Compactable Tool Whitelist Gating",
+    "summary": "Only allow cached microcompact to delete tool results for a vetted, pre-gated whitelist of tool names.",
+    "when_to_use": "Apply when cache-editing compacts conversation transcripts and must avoid deleting outputs from tools that cannot be safely re-run or are non-text.",
+    "category": "context-management",
+    "tags": [
+      "context-management",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "context-management"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/compactable-tool-whitelist-gating/SKILL.md",
+      "codex": "agents/codex/skills/compactable-tool-whitelist-gating/SKILL.md",
+      "claude_code": "agents/claude-code/skills/compactable-tool-whitelist-gating/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "context-management",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "conversation-engine-persistent-session-state",
+    "name": "Conversation Engine Persistent Session State",
+    "summary": "Keep session-level signals (messages, read caches, memory loads) alive across turns while letting per-turn caches reset for correctness.",
+    "when_to_use": "Apply when architecting a conversation engine that must persist session context while allowing per-turn caches and abort controllers to restart cleanly.",
+    "category": "context-management",
+    "tags": [
+      "context-management",
+      "agent-runtime",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "context-management"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/conversation-engine-persistent-session-state/SKILL.md",
+      "codex": "agents/codex/skills/conversation-engine-persistent-session-state/SKILL.md",
+      "claude_code": "agents/claude-code/skills/conversation-engine-persistent-session-state/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "context-management",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "largest-first-context-shedding",
+    "name": "Largest First Context Shedding",
+    "summary": "Reduce over-budget messages by persisting the largest fresh tool results first while leaving smaller or already-frozen blocks inline.",
+    "when_to_use": "Use when one outbound message exceeds the tool-result budget and you need a deterministic rule for which fresh results to replace first.",
+    "category": "context-management",
+    "tags": [
+      "context-management",
+      "tool-results",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "context-management"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/largest-first-context-shedding/SKILL.md",
+      "codex": "agents/codex/skills/largest-first-context-shedding/SKILL.md",
+      "claude_code": "agents/claude-code/skills/largest-first-context-shedding/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "context-management",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "progressive-compaction-prompt",
+    "name": "Progressive Compaction Prompt",
+    "summary": "Drive compaction summaries through structured prompts that sequence naming, artifacts, and invocation guidance before stripping analysis tags.",
+    "when_to_use": "Apply when composing compact summaries so each round captures intent, context, per-step detail, and invocation cues before the final summary is stripped to user-friendly text.",
+    "category": "context-management",
+    "tags": [
+      "context-management",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "context-management"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/progressive-compaction-prompt/SKILL.md",
+      "codex": "agents/codex/skills/progressive-compaction-prompt/SKILL.md",
+      "claude_code": "agents/claude-code/skills/progressive-compaction-prompt/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "context-management",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "relevant-memory-selection-by-header",
+    "name": "Relevant Memory Selection By Header",
+    "summary": "Rank memory files by header descriptions so only a small high-signal subset is injected back into context.",
+    "when_to_use": "Use when many memory files exist and the runtime needs to pick only the most relevant few for the current query.",
+    "category": "context-management",
+    "tags": [
+      "context-management",
+      "memory-selection",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "context-management"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/relevant-memory-selection-by-header/SKILL.md",
+      "codex": "agents/codex/skills/relevant-memory-selection-by-header/SKILL.md",
+      "claude_code": "agents/claude-code/skills/relevant-memory-selection-by-header/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -810,14 +1122,14 @@
     }
   },
   {
-    "slug": "token-budgeted-compaction-with-reinjection",
-    "name": "Token Budgeted Compaction With Reinjection",
-    "summary": "Keep compaction budgets under control by compacting incrementally and reinjecting truncated attachments only when the reasoning surface remains stable.",
-    "when_to_use": "Use when session history is growing toward the API limit and you need a safe way to trim older context while still reinjecting critical artifacts like skill metadata.",
+    "slug": "session-memory-first-compaction",
+    "name": "Session Memory First Compaction",
+    "summary": "Try lightweight session-memory summaries before falling back to heavyweight full-conversation compaction.",
+    "when_to_use": "Use when auto-compaction has access to cached session summaries that can often replace a full transcript compaction pass.",
     "category": "context-management",
     "tags": [
       "context-management",
-      "agent-runtime",
+      "compaction",
       "starter"
     ],
     "maturity": "core",
@@ -831,69 +1143,9 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/token-budgeted-compaction-with-reinjection/SKILL.md",
-      "codex": "agents/codex/skills/token-budgeted-compaction-with-reinjection/SKILL.md",
-      "claude_code": "agents/claude-code/skills/token-budgeted-compaction-with-reinjection/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "context-management",
-      "review_status": "curated"
-    }
-  },
-  {
-    "slug": "progressive-compaction-prompt",
-    "name": "Progressive Compaction Prompt",
-    "summary": "Drive compaction summaries through structured prompts that sequence naming, artifacts, and invocation guidance before stripping analysis tags.",
-    "when_to_use": "Apply when composing compact summaries so each round captures intent, context, per-step detail, and invocation cues before the final summary is stripped to user-friendly text.",
-    "category": "context-management",
-    "tags": [
-      "context-management",
-      "agent-runtime"
-    ],
-    "maturity": "recommended",
-    "bundles": [
-      "context-management"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/progressive-compaction-prompt/SKILL.md",
-      "codex": "agents/codex/skills/progressive-compaction-prompt/SKILL.md",
-      "claude_code": "agents/claude-code/skills/progressive-compaction-prompt/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "context-management",
-      "review_status": "curated"
-    }
-  },
-  {
-    "slug": "compactable-tool-whitelist-gating",
-    "name": "Compactable Tool Whitelist Gating",
-    "summary": "Only allow cached microcompact to delete tool results for a vetted, pre-gated whitelist of tool names.",
-    "when_to_use": "Apply when cache-editing compacts conversation transcripts and must avoid deleting outputs from tools that cannot be safely re-run or are non-text.",
-    "category": "context-management",
-    "tags": [
-      "context-management",
-      "agent-runtime"
-    ],
-    "maturity": "recommended",
-    "bundles": [
-      "context-management"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/compactable-tool-whitelist-gating/SKILL.md",
-      "codex": "agents/codex/skills/compactable-tool-whitelist-gating/SKILL.md",
-      "claude_code": "agents/claude-code/skills/compactable-tool-whitelist-gating/SKILL.md"
+      "universal": "skills/session-memory-first-compaction/SKILL.md",
+      "codex": "agents/codex/skills/session-memory-first-compaction/SKILL.md",
+      "claude_code": "agents/claude-code/skills/session-memory-first-compaction/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -924,6 +1176,38 @@
       "universal": "skills/time-gap-cache-expiry-microcompact/SKILL.md",
       "codex": "agents/codex/skills/time-gap-cache-expiry-microcompact/SKILL.md",
       "claude_code": "agents/claude-code/skills/time-gap-cache-expiry-microcompact/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "context-management",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "token-budgeted-compaction-with-reinjection",
+    "name": "Token Budgeted Compaction With Reinjection",
+    "summary": "Keep compaction budgets under control by compacting incrementally and reinjecting truncated attachments only when the reasoning surface remains stable.",
+    "when_to_use": "Use when session history is growing toward the API limit and you need a safe way to trim older context while still reinjecting critical artifacts like skill metadata.",
+    "category": "context-management",
+    "tags": [
+      "context-management",
+      "agent-runtime",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "context-management"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/token-budgeted-compaction-with-reinjection/SKILL.md",
+      "codex": "agents/codex/skills/token-budgeted-compaction-with-reinjection/SKILL.md",
+      "claude_code": "agents/claude-code/skills/token-budgeted-compaction-with-reinjection/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -966,8 +1250,8 @@
   {
     "slug": "additive-agent-tool-surface-construction",
     "name": "Additive Agent Tool Surface Construction",
-    "summary": "Merge agent-specific tool sets (MCP clients + fetched tools) into the parent context without disrupting the parent’s existing pool.",
-    "when_to_use": "Use this when bringing tools from newly connected MCP servers into the agent’s tool pool while preserving the parent context.",
+    "summary": "Merge agent-specific tool sets (MCP clients + fetched tools) into the parent context without disrupting the parent\u2019s existing pool.",
+    "when_to_use": "Use this when bringing tools from newly connected MCP servers into the agent\u2019s tool pool while preserving the parent context.",
     "category": "multi-agent",
     "tags": [
       "multi-agent",
@@ -998,7 +1282,7 @@
   {
     "slug": "agent-specific-mcp-server-initialization",
     "name": "Agent-Specific MCP Server Initialization",
-    "summary": "Connect each agent’s frontmatter MCP servers safely and tear them down without leaking clients, while honoring plugin-only guards.",
+    "summary": "Connect each agent\u2019s frontmatter MCP servers safely and tear them down without leaking clients, while honoring plugin-only guards.",
     "when_to_use": "Load this skill when an agent defines extra MCP servers in its frontmatter and those clients must be joined to the parent session.",
     "category": "multi-agent",
     "tags": [
@@ -1026,10 +1310,10 @@
     }
   },
   {
-    "slug": "cache-prefix-stability-for-subagents",
-    "name": "Cache Prefix Stability For Subagents",
-    "summary": "Preserve cache-critical request fields when a child agent must share the parent's prompt prefix for cache hits.",
-    "when_to_use": "Apply when a subagent should share the parent's cached prompt prefix instead of recomputing a divergent request shape.",
+    "slug": "append-only-sidechain-transcripts",
+    "name": "Append-Only Sidechain Transcripts",
+    "summary": "Persist subagent transcripts as an append-only ordered log so forks, resumes, and sidechain readers can replay history without duplication.",
+    "when_to_use": "Subagent transcript persistence must stay append-only so forked history can be resumed and sidechain readers see messages in strict chronological order.",
     "category": "multi-agent",
     "tags": [
       "multi-agent",
@@ -1045,9 +1329,40 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/cache-prefix-stability-for-subagents/SKILL.md",
-      "codex": "agents/codex/skills/cache-prefix-stability-for-subagents/SKILL.md",
-      "claude_code": "agents/claude-code/skills/cache-prefix-stability-for-subagents/SKILL.md"
+      "universal": "skills/append-only-sidechain-transcripts/SKILL.md",
+      "codex": "agents/codex/skills/append-only-sidechain-transcripts/SKILL.md",
+      "claude_code": "agents/claude-code/skills/append-only-sidechain-transcripts/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "multi-agent",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "built-in-agent-feature-gating",
+    "name": "Built-In Agent Feature Gating",
+    "summary": "Expose built-in agents according to entrypoint, mode, and feature flags so each runtime gets the right built-in surface.",
+    "when_to_use": "Use when built-in agent registration should differ across CLI, SDK, coordinator, or experiment-enabled entrypoints.",
+    "category": "multi-agent",
+    "tags": [
+      "multi-agent",
+      "agent-runtime",
+      "feature-gating"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "multi-agent"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/built-in-agent-feature-gating/SKILL.md",
+      "codex": "agents/codex/skills/built-in-agent-feature-gating/SKILL.md",
+      "claude_code": "agents/claude-code/skills/built-in-agent-feature-gating/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -1086,19 +1401,17 @@
     }
   },
   {
-    "slug": "permission-overlay-inheritance",
-    "name": "Permission Overlay Inheritance",
-    "summary": "Layer child permission rules over parent session policy without dropping root-level grants or mutating shared state.",
-    "when_to_use": "Apply when a subagent or nested workflow needs a narrower permission contract but must still inherit the parent session's top-level grants.",
+    "slug": "cache-prefix-stability-for-subagents",
+    "name": "Cache Prefix Stability For Subagents",
+    "summary": "Preserve cache-critical request fields when a child agent must share the parent's prompt prefix for cache hits.",
+    "when_to_use": "Apply when a subagent should share the parent's cached prompt prefix instead of recomputing a divergent request shape.",
     "category": "multi-agent",
     "tags": [
       "multi-agent",
-      "agent-runtime",
-      "starter"
+      "agent-runtime"
     ],
-    "maturity": "core",
+    "maturity": "recommended",
     "bundles": [
-      "starter",
       "multi-agent"
     ],
     "targets": [
@@ -1107,9 +1420,9 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/permission-overlay-inheritance/SKILL.md",
-      "codex": "agents/codex/skills/permission-overlay-inheritance/SKILL.md",
-      "claude_code": "agents/claude-code/skills/permission-overlay-inheritance/SKILL.md"
+      "universal": "skills/cache-prefix-stability-for-subagents/SKILL.md",
+      "codex": "agents/codex/skills/cache-prefix-stability-for-subagents/SKILL.md",
+      "claude_code": "agents/claude-code/skills/cache-prefix-stability-for-subagents/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -1140,6 +1453,69 @@
       "universal": "skills/fork-child-directive-guardrails/SKILL.md",
       "codex": "agents/codex/skills/fork-child-directive-guardrails/SKILL.md",
       "claude_code": "agents/claude-code/skills/fork-child-directive-guardrails/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "multi-agent",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "forked-auto-memory-extraction",
+    "name": "Forked Auto Memory Extraction",
+    "summary": "Run memory harvesting in a fenced background agent after the main turn so the primary loop stays responsive.",
+    "when_to_use": "Use when memory extraction should happen after the main turn in an isolated child agent instead of delaying the primary conversation loop.",
+    "category": "multi-agent",
+    "tags": [
+      "multi-agent",
+      "memory",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "multi-agent",
+      "context-management"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/forked-auto-memory-extraction/SKILL.md",
+      "codex": "agents/codex/skills/forked-auto-memory-extraction/SKILL.md",
+      "claude_code": "agents/claude-code/skills/forked-auto-memory-extraction/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "multi-agent",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "forked-skill-execution-with-isolated-context",
+    "name": "Forked Skill Execution With Isolated Context",
+    "summary": "Run SkillTool slash commands inside a forked sub-agent so the skill has isolated budget, telemetry, and lifecycle.",
+    "when_to_use": "Load this skill when SkillTool needs to wrap a prompt command marked with `context:'fork'` into a sub-agent run that cannot touch the parent session state.",
+    "category": "multi-agent",
+    "tags": [
+      "multi-agent",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "multi-agent"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/forked-skill-execution-with-isolated-context/SKILL.md",
+      "codex": "agents/codex/skills/forked-skill-execution-with-isolated-context/SKILL.md",
+      "claude_code": "agents/claude-code/skills/forked-skill-execution-with-isolated-context/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -1180,13 +1556,14 @@
     }
   },
   {
-    "slug": "forked-skill-execution-with-isolated-context",
-    "name": "Forked Skill Execution With Isolated Context",
-    "summary": "Run SkillTool slash commands inside a forked sub-agent so the skill has isolated budget, telemetry, and lifecycle.",
-    "when_to_use": "Load this skill when SkillTool needs to wrap a prompt command marked with `context:'fork'` into a sub-agent run that cannot touch the parent session state.",
+    "slug": "namespace-resolved-skill-preloading",
+    "name": "Namespace-Resolved Skill Preloading",
+    "summary": "Resolve startup skill names through layered namespace lookup before preloading them as explicit visible context.",
+    "when_to_use": "Use when agent definitions preload startup skills by friendly name but the registry may store them under namespaced or plugin-qualified identifiers.",
     "category": "multi-agent",
     "tags": [
       "multi-agent",
+      "skill-loading",
       "agent-runtime"
     ],
     "maturity": "recommended",
@@ -1199,69 +1576,9 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/forked-skill-execution-with-isolated-context/SKILL.md",
-      "codex": "agents/codex/skills/forked-skill-execution-with-isolated-context/SKILL.md",
-      "claude_code": "agents/claude-code/skills/forked-skill-execution-with-isolated-context/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "multi-agent",
-      "review_status": "curated"
-    }
-  },
-  {
-    "slug": "append-only-sidechain-transcripts",
-    "name": "Append-Only Sidechain Transcripts",
-    "summary": "Persist subagent transcripts as an append-only ordered log so forks, resumes, and sidechain readers can replay history without duplication.",
-    "when_to_use": "Subagent transcript persistence must stay append-only so forked history can be resumed and sidechain readers see messages in strict chronological order.",
-    "category": "multi-agent",
-    "tags": [
-      "multi-agent",
-      "agent-runtime"
-    ],
-    "maturity": "recommended",
-    "bundles": [
-      "multi-agent"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/append-only-sidechain-transcripts/SKILL.md",
-      "codex": "agents/codex/skills/append-only-sidechain-transcripts/SKILL.md",
-      "claude_code": "agents/claude-code/skills/append-only-sidechain-transcripts/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "multi-agent",
-      "review_status": "curated"
-    }
-  },
-  {
-    "slug": "trusted-frontmatter-gating",
-    "name": "Trusted Frontmatter Gating",
-    "summary": "Gate frontmatter MCP servers, hooks, and skills behind admin trust when plugin-only or hook-only modes are active.",
-    "when_to_use": "Apply this pattern when you are about to honor MCP servers, hooks, or skill preloads declared in an agent’s frontmatter while the session may be locked to plugin-only/customized trust settings.",
-    "category": "multi-agent",
-    "tags": [
-      "multi-agent",
-      "agent-runtime"
-    ],
-    "maturity": "recommended",
-    "bundles": [
-      "multi-agent"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/trusted-frontmatter-gating/SKILL.md",
-      "codex": "agents/codex/skills/trusted-frontmatter-gating/SKILL.md",
-      "claude_code": "agents/claude-code/skills/trusted-frontmatter-gating/SKILL.md"
+      "universal": "skills/namespace-resolved-skill-preloading/SKILL.md",
+      "codex": "agents/codex/skills/namespace-resolved-skill-preloading/SKILL.md",
+      "claude_code": "agents/claude-code/skills/namespace-resolved-skill-preloading/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -1300,18 +1617,20 @@
     }
   },
   {
-    "slug": "three-layer-extension-sync",
-    "name": "Three-Layer Extension Sync",
-    "summary": "Model extension lifecycle as intent, materialization, and active runtime layers, then sync each layer with dedicated transitions.",
-    "when_to_use": "Apply when extensions exist simultaneously as declared settings, on-disk installs, and live runtime components, and those layers must stay coherent.",
-    "category": "extensions-mcp",
+    "slug": "permission-overlay-inheritance",
+    "name": "Permission Overlay Inheritance",
+    "summary": "Layer child permission rules over parent session policy without dropping root-level grants or mutating shared state.",
+    "when_to_use": "Apply when a subagent or nested workflow needs a narrower permission contract but must still inherit the parent session's top-level grants.",
+    "category": "multi-agent",
     "tags": [
-      "extensions-mcp",
-      "agent-runtime"
+      "multi-agent",
+      "agent-runtime",
+      "starter"
     ],
-    "maturity": "recommended",
+    "maturity": "core",
     "bundles": [
-      "extensions-mcp"
+      "starter",
+      "multi-agent"
     ],
     "targets": [
       "universal",
@@ -1319,13 +1638,74 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/three-layer-extension-sync/SKILL.md",
-      "codex": "agents/codex/skills/three-layer-extension-sync/SKILL.md",
-      "claude_code": "agents/claude-code/skills/three-layer-extension-sync/SKILL.md"
+      "universal": "skills/permission-overlay-inheritance/SKILL.md",
+      "codex": "agents/codex/skills/permission-overlay-inheritance/SKILL.md",
+      "claude_code": "agents/claude-code/skills/permission-overlay-inheritance/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
-      "pattern_family": "extensions-mcp",
+      "pattern_family": "multi-agent",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "subagent-metrics-bridging",
+    "name": "Subagent Metrics Bridging",
+    "summary": "Connect async subagent streams to progress UI, analytics, and notifications from one finalized lifecycle snapshot.",
+    "when_to_use": "Use when background or async subagents must report progress, token usage, completion, and partial results back to the host runtime.",
+    "category": "multi-agent",
+    "tags": [
+      "multi-agent",
+      "analytics",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "multi-agent"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/subagent-metrics-bridging/SKILL.md",
+      "codex": "agents/codex/skills/subagent-metrics-bridging/SKILL.md",
+      "claude_code": "agents/claude-code/skills/subagent-metrics-bridging/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "multi-agent",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "trusted-frontmatter-gating",
+    "name": "Trusted Frontmatter Gating",
+    "summary": "Gate frontmatter MCP servers, hooks, and skills behind admin trust when plugin-only or hook-only modes are active.",
+    "when_to_use": "Apply this pattern when you are about to honor MCP servers, hooks, or skill preloads declared in an agent\u2019s frontmatter while the session may be locked to plugin-only/customized trust settings.",
+    "category": "multi-agent",
+    "tags": [
+      "multi-agent",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "multi-agent"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/trusted-frontmatter-gating/SKILL.md",
+      "codex": "agents/codex/skills/trusted-frontmatter-gating/SKILL.md",
+      "claude_code": "agents/claude-code/skills/trusted-frontmatter-gating/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "multi-agent",
       "review_status": "curated"
     }
   },
@@ -1360,6 +1740,130 @@
     }
   },
   {
+    "slug": "mcp-skill-vs-prompt-discovery-filtering",
+    "name": "MCP Skill vs Prompt Discovery Filtering",
+    "summary": "Merge MCP-discovered prompt skills with local commands only after type filtering and name deduplication.",
+    "when_to_use": "Use when MCP-discovered commands should appear in a unified skill surface without shadowing or duplicating local prompt commands.",
+    "category": "extensions-mcp",
+    "tags": [
+      "extensions-mcp",
+      "command-surfaces",
+      "mcp"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "command-surfaces",
+      "extensions-mcp"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/mcp-skill-vs-prompt-discovery-filtering/SKILL.md",
+      "codex": "agents/codex/skills/mcp-skill-vs-prompt-discovery-filtering/SKILL.md",
+      "claude_code": "agents/claude-code/skills/mcp-skill-vs-prompt-discovery-filtering/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "extensions-mcp",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "plugin-only-agent-surface-gating",
+    "name": "Plugin-Only Agent Surface Gating",
+    "summary": "Prevent untrusted agent definitions from expanding the MCP surface when the session is locked to plugin-only extensions.",
+    "when_to_use": "Use when agent-defined MCP servers must respect a plugin-only trust boundary instead of silently expanding the runtime surface.",
+    "category": "extensions-mcp",
+    "tags": [
+      "extensions-mcp",
+      "multi-agent",
+      "security"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "extensions-mcp",
+      "multi-agent"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/plugin-only-agent-surface-gating/SKILL.md",
+      "codex": "agents/codex/skills/plugin-only-agent-surface-gating/SKILL.md",
+      "claude_code": "agents/claude-code/skills/plugin-only-agent-surface-gating/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "extensions-mcp",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "three-layer-extension-sync",
+    "name": "Three-Layer Extension Sync",
+    "summary": "Model extension lifecycle as intent, materialization, and active runtime layers, then sync each layer with dedicated transitions.",
+    "when_to_use": "Apply when extensions exist simultaneously as declared settings, on-disk installs, and live runtime components, and those layers must stay coherent.",
+    "category": "extensions-mcp",
+    "tags": [
+      "extensions-mcp",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "extensions-mcp"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/three-layer-extension-sync/SKILL.md",
+      "codex": "agents/codex/skills/three-layer-extension-sync/SKILL.md",
+      "claude_code": "agents/claude-code/skills/three-layer-extension-sync/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "extensions-mcp",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "auto-memory-tool-permission-fencing",
+    "name": "Auto Memory Tool Permission Fencing",
+    "summary": "Gate every tool call in the auto-memory extract agent so only safe read-only actions and targeted writes execute.",
+    "when_to_use": "Apply whenever a background auto-memory agent must be limited to safe read-only commands and writes that target the memory directory.",
+    "category": "safety-worktrees",
+    "tags": [
+      "safety-worktrees",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "safety-worktrees"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/auto-memory-tool-permission-fencing/SKILL.md",
+      "codex": "agents/codex/skills/auto-memory-tool-permission-fencing/SKILL.md",
+      "claude_code": "agents/claude-code/skills/auto-memory-tool-permission-fencing/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "safety-worktrees",
+      "review_status": "curated"
+    }
+  },
+  {
     "slug": "canonical-worktree-path-normalization",
     "name": "Canonical Worktree Path Normalization",
     "summary": "Resolve repo-relative paths against the canonical checkout root so shared state stays stable across Git worktrees.",
@@ -1390,68 +1894,6 @@
     }
   },
   {
-    "slug": "fast-worktree-reuse-with-head-pointer-checks",
-    "name": "Fast Worktree Reuse With Head Pointer Checks",
-    "summary": "Resume existing worktrees quickly by checking stored HEAD pointers before fetching or recreating.",
-    "when_to_use": "Apply when the user asks to enter or resume a named worktree and you want to avoid redundant `git fetch`/`git worktree add` calls if the worktree already exists.",
-    "category": "safety-worktrees",
-    "tags": [
-      "safety-worktrees",
-      "agent-runtime",
-      "starter"
-    ],
-    "maturity": "core",
-    "bundles": [
-      "starter",
-      "safety-worktrees"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/fast-worktree-reuse-with-head-pointer-checks/SKILL.md",
-      "codex": "agents/codex/skills/fast-worktree-reuse-with-head-pointer-checks/SKILL.md",
-      "claude_code": "agents/claude-code/skills/fast-worktree-reuse-with-head-pointer-checks/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "safety-worktrees",
-      "review_status": "curated"
-    }
-  },
-  {
-    "slug": "safe-worktree-slug-validation",
-    "name": "Safe Worktree Slug Validation",
-    "summary": "Ensure Git worktree slugs can never escape the managed workspace or inject traversal.",
-    "when_to_use": "Apply this when accepting user-provided prefixes for `EnterWorktree` and you need to guarantee no path traversal or invalid chars slip into the worktree directory.",
-    "category": "safety-worktrees",
-    "tags": [
-      "safety-worktrees",
-      "agent-runtime"
-    ],
-    "maturity": "recommended",
-    "bundles": [
-      "safety-worktrees"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/safe-worktree-slug-validation/SKILL.md",
-      "codex": "agents/codex/skills/safe-worktree-slug-validation/SKILL.md",
-      "claude_code": "agents/claude-code/skills/safe-worktree-slug-validation/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "safety-worktrees",
-      "review_status": "curated"
-    }
-  },
-  {
     "slug": "case-normalized-sensitive-path-guards",
     "name": "Case-Normalized Sensitive Path Guards",
     "summary": "Normalize filesystem paths and reject matches that try to spoof sensitive directories with mixed case or alternate separators.",
@@ -1474,6 +1916,36 @@
       "universal": "skills/case-normalized-sensitive-path-guards/SKILL.md",
       "codex": "agents/codex/skills/case-normalized-sensitive-path-guards/SKILL.md",
       "claude_code": "agents/claude-code/skills/case-normalized-sensitive-path-guards/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "safety-worktrees",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "cross-shell-command-safety-maps",
+    "name": "Cross Shell Command Safety Maps",
+    "summary": "Describe how to centralize cross-platform safe commands, UNC detection, and per-shell path guards so every shell tool shares the same policy.",
+    "when_to_use": "Apply this when you need to enforce identical permissions across bash/PowerShell, detect UNC paths, and keep dangerous config files hidden to both shells.",
+    "category": "safety-worktrees",
+    "tags": [
+      "safety-worktrees",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "safety-worktrees"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/cross-shell-command-safety-maps/SKILL.md",
+      "codex": "agents/codex/skills/cross-shell-command-safety-maps/SKILL.md",
+      "claude_code": "agents/claude-code/skills/cross-shell-command-safety-maps/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -1544,17 +2016,19 @@
     }
   },
   {
-    "slug": "cross-shell-command-safety-maps",
-    "name": "Cross Shell Command Safety Maps",
-    "summary": "Describe how to centralize cross-platform safe commands, UNC detection, and per-shell path guards so every shell tool shares the same policy.",
-    "when_to_use": "Apply this when you need to enforce identical permissions across bash/PowerShell, detect UNC paths, and keep dangerous config files hidden to both shells.",
+    "slug": "fast-worktree-reuse-with-head-pointer-checks",
+    "name": "Fast Worktree Reuse With Head Pointer Checks",
+    "summary": "Resume existing worktrees quickly by checking stored HEAD pointers before fetching or recreating.",
+    "when_to_use": "Apply when the user asks to enter or resume a named worktree and you want to avoid redundant `git fetch`/`git worktree add` calls if the worktree already exists.",
     "category": "safety-worktrees",
     "tags": [
       "safety-worktrees",
-      "agent-runtime"
+      "agent-runtime",
+      "starter"
     ],
-    "maturity": "recommended",
+    "maturity": "core",
     "bundles": [
+      "starter",
       "safety-worktrees"
     ],
     "targets": [
@@ -1563,9 +2037,41 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/cross-shell-command-safety-maps/SKILL.md",
-      "codex": "agents/codex/skills/cross-shell-command-safety-maps/SKILL.md",
-      "claude_code": "agents/claude-code/skills/cross-shell-command-safety-maps/SKILL.md"
+      "universal": "skills/fast-worktree-reuse-with-head-pointer-checks/SKILL.md",
+      "codex": "agents/codex/skills/fast-worktree-reuse-with-head-pointer-checks/SKILL.md",
+      "claude_code": "agents/claude-code/skills/fast-worktree-reuse-with-head-pointer-checks/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "safety-worktrees",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "plan-mode-permission-gating",
+    "name": "Plan Mode Permission Gating",
+    "summary": "Enter plan mode through an explicit permission transition that enforces a no-edit planning state before implementation.",
+    "when_to_use": "Use when complex tasks should move the session into a reviewed planning mode before file edits or implementation work begin.",
+    "category": "safety-worktrees",
+    "tags": [
+      "safety-worktrees",
+      "permissions",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "safety-worktrees"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/plan-mode-permission-gating/SKILL.md",
+      "codex": "agents/codex/skills/plan-mode-permission-gating/SKILL.md",
+      "claude_code": "agents/claude-code/skills/plan-mode-permission-gating/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -1606,10 +2112,10 @@
     }
   },
   {
-    "slug": "auto-memory-tool-permission-fencing",
-    "name": "Auto Memory Tool Permission Fencing",
-    "summary": "Gate every tool call in the auto-memory extract agent so only safe read-only actions and targeted writes execute.",
-    "when_to_use": "Apply whenever a background auto-memory agent must be limited to safe read-only commands and writes that target the memory directory.",
+    "slug": "safe-worktree-slug-validation",
+    "name": "Safe Worktree Slug Validation",
+    "summary": "Ensure Git worktree slugs can never escape the managed workspace or inject traversal.",
+    "when_to_use": "Apply this when accepting user-provided prefixes for `EnterWorktree` and you need to guarantee no path traversal or invalid chars slip into the worktree directory.",
     "category": "safety-worktrees",
     "tags": [
       "safety-worktrees",
@@ -1625,9 +2131,9 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/auto-memory-tool-permission-fencing/SKILL.md",
-      "codex": "agents/codex/skills/auto-memory-tool-permission-fencing/SKILL.md",
-      "claude_code": "agents/claude-code/skills/auto-memory-tool-permission-fencing/SKILL.md"
+      "universal": "skills/safe-worktree-slug-validation/SKILL.md",
+      "codex": "agents/codex/skills/safe-worktree-slug-validation/SKILL.md",
+      "claude_code": "agents/claude-code/skills/safe-worktree-slug-validation/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -1668,36 +2174,6 @@
     }
   },
   {
-    "slug": "type-tiered-bridge-command-gating",
-    "name": "Type Tiered Bridge Command Gating",
-    "summary": "Gate bridge-executed slash commands by command type first: block local-jsx UI commands, allow prompt commands by construction, and require an explicit allowlist for plain local commands.",
-    "when_to_use": "Use when a remote or bridged client can invoke slash commands and you need a simple safety rule that separates text-expanding commands from local UI commands and plain local actions.",
-    "category": "remote-bridge",
-    "tags": [
-      "remote-bridge",
-      "agent-runtime"
-    ],
-    "maturity": "recommended",
-    "bundles": [
-      "remote-bridge"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/type-tiered-bridge-command-gating/SKILL.md",
-      "codex": "agents/codex/skills/type-tiered-bridge-command-gating/SKILL.md",
-      "claude_code": "agents/claude-code/skills/type-tiered-bridge-command-gating/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "remote-bridge",
-      "review_status": "curated"
-    }
-  },
-  {
     "slug": "bridge-safe-command-advertising",
     "name": "Bridge Safe Command Advertising",
     "summary": "Advertise only slash commands that a bridge client can actually invoke by filtering announcements with the same bridge-safety predicate used at execution time.",
@@ -1728,10 +2204,10 @@
     }
   },
   {
-    "slug": "user-invocable-capability-serialization",
-    "name": "User-Invocable Capability Serialization",
-    "summary": "Serialize announced command and skill surfaces from a shared capability shape, excluding entries explicitly marked non-user-invocable.",
-    "when_to_use": "Use when a session-init payload or capability announcement is projecting commands, skills, or similar affordances into a user-visible surface and some registry entries are internal-only.",
+    "slug": "legacy-wire-name-compat-translation",
+    "name": "Legacy Wire Name Compat Translation",
+    "summary": "Translate renamed internal identifiers back to their legacy wire names at serialization boundaries so patch-level consumers keep working until the planned version cutoff.",
+    "when_to_use": "Apply when an internal tool, command, or capability identifier has been renamed, but existing SDK or UI consumers still depend on the old wire name and cannot safely break on a patch release.",
     "category": "remote-bridge",
     "tags": [
       "remote-bridge",
@@ -1747,9 +2223,9 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/user-invocable-capability-serialization/SKILL.md",
-      "codex": "agents/codex/skills/user-invocable-capability-serialization/SKILL.md",
-      "claude_code": "agents/claude-code/skills/user-invocable-capability-serialization/SKILL.md"
+      "universal": "skills/legacy-wire-name-compat-translation/SKILL.md",
+      "codex": "agents/codex/skills/legacy-wire-name-compat-translation/SKILL.md",
+      "claude_code": "agents/claude-code/skills/legacy-wire-name-compat-translation/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -1758,19 +2234,18 @@
     }
   },
   {
-    "slug": "shared-system-init-shape-parity",
-    "name": "Shared System Init Shape Parity",
-    "summary": "Centralize `system/init` or capability payload construction in one builder so multiple transports emit identical schemas and only vary inputs or delivery.",
-    "when_to_use": "Use when the same `system/init` or capability-announcement payload is emitted from multiple entrypoints or transports and downstream clients depend on one stable schema.",
+    "slug": "nonblocking-post-connect-capability-broadcast",
+    "name": "Nonblocking Post-Connect Capability Broadcast",
+    "summary": "Mark bridge sessions ready first, then send optional capability metadata asynchronously without delaying readiness.",
+    "when_to_use": "Use when a remote bridge or transport should become usable immediately while optional capability discovery continues in the background.",
     "category": "remote-bridge",
     "tags": [
       "remote-bridge",
-      "agent-runtime",
-      "starter"
+      "bridge-lifecycle",
+      "agent-runtime"
     ],
-    "maturity": "core",
+    "maturity": "recommended",
     "bundles": [
-      "starter",
       "remote-bridge"
     ],
     "targets": [
@@ -1779,9 +2254,9 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/shared-system-init-shape-parity/SKILL.md",
-      "codex": "agents/codex/skills/shared-system-init-shape-parity/SKILL.md",
-      "claude_code": "agents/claude-code/skills/shared-system-init-shape-parity/SKILL.md"
+      "universal": "skills/nonblocking-post-connect-capability-broadcast/SKILL.md",
+      "codex": "agents/codex/skills/nonblocking-post-connect-capability-broadcast/SKILL.md",
+      "claude_code": "agents/claude-code/skills/nonblocking-post-connect-capability-broadcast/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -1822,10 +2297,42 @@
     }
   },
   {
-    "slug": "legacy-wire-name-compat-translation",
-    "name": "Legacy Wire Name Compat Translation",
-    "summary": "Translate renamed internal identifiers back to their legacy wire names at serialization boundaries so patch-level consumers keep working until the planned version cutoff.",
-    "when_to_use": "Apply when an internal tool, command, or capability identifier has been renamed, but existing SDK or UI consumers still depend on the old wire name and cannot safely break on a patch release.",
+    "slug": "shared-system-init-shape-parity",
+    "name": "Shared System Init Shape Parity",
+    "summary": "Centralize `system/init` or capability payload construction in one builder so multiple transports emit identical schemas and only vary inputs or delivery.",
+    "when_to_use": "Use when the same `system/init` or capability-announcement payload is emitted from multiple entrypoints or transports and downstream clients depend on one stable schema.",
+    "category": "remote-bridge",
+    "tags": [
+      "remote-bridge",
+      "agent-runtime",
+      "starter"
+    ],
+    "maturity": "core",
+    "bundles": [
+      "starter",
+      "remote-bridge"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/shared-system-init-shape-parity/SKILL.md",
+      "codex": "agents/codex/skills/shared-system-init-shape-parity/SKILL.md",
+      "claude_code": "agents/claude-code/skills/shared-system-init-shape-parity/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "remote-bridge",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "type-tiered-bridge-command-gating",
+    "name": "Type Tiered Bridge Command Gating",
+    "summary": "Gate bridge-executed slash commands by command type first: block local-jsx UI commands, allow prompt commands by construction, and require an explicit allowlist for plain local commands.",
+    "when_to_use": "Use when a remote or bridged client can invoke slash commands and you need a simple safety rule that separates text-expanding commands from local UI commands and plain local actions.",
     "category": "remote-bridge",
     "tags": [
       "remote-bridge",
@@ -1841,9 +2348,39 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/legacy-wire-name-compat-translation/SKILL.md",
-      "codex": "agents/codex/skills/legacy-wire-name-compat-translation/SKILL.md",
-      "claude_code": "agents/claude-code/skills/legacy-wire-name-compat-translation/SKILL.md"
+      "universal": "skills/type-tiered-bridge-command-gating/SKILL.md",
+      "codex": "agents/codex/skills/type-tiered-bridge-command-gating/SKILL.md",
+      "claude_code": "agents/claude-code/skills/type-tiered-bridge-command-gating/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "remote-bridge",
+      "review_status": "curated"
+    }
+  },
+  {
+    "slug": "user-invocable-capability-serialization",
+    "name": "User-Invocable Capability Serialization",
+    "summary": "Serialize announced command and skill surfaces from a shared capability shape, excluding entries explicitly marked non-user-invocable.",
+    "when_to_use": "Use when a session-init payload or capability announcement is projecting commands, skills, or similar affordances into a user-visible surface and some registry entries are internal-only.",
+    "category": "remote-bridge",
+    "tags": [
+      "remote-bridge",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "remote-bridge"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/user-invocable-capability-serialization/SKILL.md",
+      "codex": "agents/codex/skills/user-invocable-capability-serialization/SKILL.md",
+      "claude_code": "agents/claude-code/skills/user-invocable-capability-serialization/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -1876,38 +2413,6 @@
       "universal": "skills/ansi-safe-border-caption-embedding/SKILL.md",
       "codex": "agents/codex/skills/ansi-safe-border-caption-embedding/SKILL.md",
       "claude_code": "agents/claude-code/skills/ansi-safe-border-caption-embedding/SKILL.md"
-    },
-    "source": {
-      "type": "reviewed-implementation",
-      "pattern_family": "terminal-ui",
-      "review_status": "curated"
-    }
-  },
-  {
-    "slug": "wrapped-text-style-preservation",
-    "name": "Wrapped Text Style Preservation",
-    "summary": "Track per-character segments so wrapped or truncated text keeps its original colors and emphasis.",
-    "when_to_use": "When you must wrap or truncate a styled text run but cannot afford to lose per-segment colors, links, or emphasis, especially inside terminals that split lines at wrap boundaries.",
-    "category": "terminal-ui",
-    "tags": [
-      "terminal-ui",
-      "agent-runtime",
-      "starter"
-    ],
-    "maturity": "core",
-    "bundles": [
-      "starter",
-      "terminal-ui"
-    ],
-    "targets": [
-      "universal",
-      "codex-compatible",
-      "claude-code-compatible"
-    ],
-    "paths": {
-      "universal": "skills/wrapped-text-style-preservation/SKILL.md",
-      "codex": "agents/codex/skills/wrapped-text-style-preservation/SKILL.md",
-      "claude_code": "agents/claude-code/skills/wrapped-text-style-preservation/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",
@@ -2008,6 +2513,36 @@
     }
   },
   {
+    "slug": "scrollback-freeze-optimization",
+    "name": "Scrollback Freeze Optimization",
+    "summary": "Cache and reuse animated children once they slide into scrollback so terminal resets never occur.",
+    "when_to_use": "Apply whenever you render active widgets that can scroll into terminal history and would otherwise force full-screen updates.",
+    "category": "terminal-ui",
+    "tags": [
+      "terminal-ui",
+      "agent-runtime"
+    ],
+    "maturity": "recommended",
+    "bundles": [
+      "terminal-ui"
+    ],
+    "targets": [
+      "universal",
+      "codex-compatible",
+      "claude-code-compatible"
+    ],
+    "paths": {
+      "universal": "skills/scrollback-freeze-optimization/SKILL.md",
+      "codex": "agents/codex/skills/scrollback-freeze-optimization/SKILL.md",
+      "claude_code": "agents/claude-code/skills/scrollback-freeze-optimization/SKILL.md"
+    },
+    "source": {
+      "type": "reviewed-implementation",
+      "pattern_family": "terminal-ui",
+      "review_status": "curated"
+    }
+  },
+  {
     "slug": "viewport-aware-animation-pausing",
     "name": "Viewport-Aware Animation Pausing",
     "summary": "Stop updating animation ticks as soon as the animated element leaves the viewport so scrollback never forces terminal resets.",
@@ -2038,17 +2573,19 @@
     }
   },
   {
-    "slug": "scrollback-freeze-optimization",
-    "name": "Scrollback Freeze Optimization",
-    "summary": "Cache and reuse animated children once they slide into scrollback so terminal resets never occur.",
-    "when_to_use": "Apply whenever you render active widgets that can scroll into terminal history and would otherwise force full-screen updates.",
+    "slug": "wrapped-text-style-preservation",
+    "name": "Wrapped Text Style Preservation",
+    "summary": "Track per-character segments so wrapped or truncated text keeps its original colors and emphasis.",
+    "when_to_use": "When you must wrap or truncate a styled text run but cannot afford to lose per-segment colors, links, or emphasis, especially inside terminals that split lines at wrap boundaries.",
     "category": "terminal-ui",
     "tags": [
       "terminal-ui",
-      "agent-runtime"
+      "agent-runtime",
+      "starter"
     ],
-    "maturity": "recommended",
+    "maturity": "core",
     "bundles": [
+      "starter",
       "terminal-ui"
     ],
     "targets": [
@@ -2057,9 +2594,9 @@
       "claude-code-compatible"
     ],
     "paths": {
-      "universal": "skills/scrollback-freeze-optimization/SKILL.md",
-      "codex": "agents/codex/skills/scrollback-freeze-optimization/SKILL.md",
-      "claude_code": "agents/claude-code/skills/scrollback-freeze-optimization/SKILL.md"
+      "universal": "skills/wrapped-text-style-preservation/SKILL.md",
+      "codex": "agents/codex/skills/wrapped-text-style-preservation/SKILL.md",
+      "claude_code": "agents/claude-code/skills/wrapped-text-style-preservation/SKILL.md"
     },
     "source": {
       "type": "reviewed-implementation",

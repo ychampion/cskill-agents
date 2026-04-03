@@ -1,0 +1,25 @@
+slug: largest-first-context-shedding
+name: "Largest First Context Shedding"
+summary: "Reduce over-budget messages by persisting the largest fresh tool results first while leaving smaller or already-frozen blocks inline."
+when_to_use: "Use when one outbound message exceeds the tool-result budget and you need a deterministic rule for which fresh results to replace first."
+category: context-management
+maturity: core
+tags:
+  - context-management
+  - tool-results
+  - starter
+bundles:
+  - starter
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/largest-first-context-shedding/SKILL.md
+  codex: agents/codex/skills/largest-first-context-shedding/SKILL.md
+  claude_code: agents/claude-code/skills/largest-first-context-shedding/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated

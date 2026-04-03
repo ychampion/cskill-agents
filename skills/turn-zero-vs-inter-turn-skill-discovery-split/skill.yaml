@@ -1,0 +1,24 @@
+slug: turn-zero-vs-inter-turn-skill-discovery-split
+name: "Turn-Zero vs Inter-Turn Skill Discovery Split"
+summary: "Block only the first discovery pass, then overlap later discovery with tool execution so streaming turns stay responsive."
+when_to_use: "Use when first-turn skill discovery must be accurate but repeated blocking discovery would slow every later turn."
+category: command-surfaces
+maturity: recommended
+tags:
+  - command-surfaces
+  - skill-discovery
+  - latency
+bundles:
+  - command-surfaces
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/turn-zero-vs-inter-turn-skill-discovery-split/SKILL.md
+  codex: agents/codex/skills/turn-zero-vs-inter-turn-skill-discovery-split/SKILL.md
+  claude_code: agents/claude-code/skills/turn-zero-vs-inter-turn-skill-discovery-split/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: command-surfaces
+  review_status: curated

@@ -1,0 +1,25 @@
+slug: mcp-skill-vs-prompt-discovery-filtering
+name: "MCP Skill vs Prompt Discovery Filtering"
+summary: "Merge MCP-discovered prompt skills with local commands only after type filtering and name deduplication."
+when_to_use: "Use when MCP-discovered commands should appear in a unified skill surface without shadowing or duplicating local prompt commands."
+category: extensions-mcp
+maturity: core
+tags:
+  - extensions-mcp
+  - command-surfaces
+  - mcp
+bundles:
+  - command-surfaces
+  - extensions-mcp
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/mcp-skill-vs-prompt-discovery-filtering/SKILL.md
+  codex: agents/codex/skills/mcp-skill-vs-prompt-discovery-filtering/SKILL.md
+  claude_code: agents/claude-code/skills/mcp-skill-vs-prompt-discovery-filtering/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: extensions-mcp
+  review_status: curated

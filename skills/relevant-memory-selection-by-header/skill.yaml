@@ -1,0 +1,24 @@
+slug: relevant-memory-selection-by-header
+name: "Relevant Memory Selection By Header"
+summary: "Rank memory files by header descriptions so only a small high-signal subset is injected back into context."
+when_to_use: "Use when many memory files exist and the runtime needs to pick only the most relevant few for the current query."
+category: context-management
+maturity: recommended
+tags:
+  - context-management
+  - memory-selection
+  - agent-runtime
+bundles:
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/relevant-memory-selection-by-header/SKILL.md
+  codex: agents/codex/skills/relevant-memory-selection-by-header/SKILL.md
+  claude_code: agents/claude-code/skills/relevant-memory-selection-by-header/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated

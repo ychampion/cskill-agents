@@ -1,0 +1,25 @@
+slug: plan-mode-permission-gating
+name: "Plan Mode Permission Gating"
+summary: "Enter plan mode through an explicit permission transition that enforces a no-edit planning state before implementation."
+when_to_use: "Use when complex tasks should move the session into a reviewed planning mode before file edits or implementation work begin."
+category: safety-worktrees
+maturity: core
+tags:
+  - safety-worktrees
+  - permissions
+  - starter
+bundles:
+  - starter
+  - safety-worktrees
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/plan-mode-permission-gating/SKILL.md
+  codex: agents/codex/skills/plan-mode-permission-gating/SKILL.md
+  claude_code: agents/claude-code/skills/plan-mode-permission-gating/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: safety-worktrees
+  review_status: curated

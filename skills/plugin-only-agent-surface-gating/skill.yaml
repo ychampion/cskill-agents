@@ -1,0 +1,25 @@
+slug: plugin-only-agent-surface-gating
+name: "Plugin-Only Agent Surface Gating"
+summary: "Prevent untrusted agent definitions from expanding the MCP surface when the session is locked to plugin-only extensions."
+when_to_use: "Use when agent-defined MCP servers must respect a plugin-only trust boundary instead of silently expanding the runtime surface."
+category: extensions-mcp
+maturity: core
+tags:
+  - extensions-mcp
+  - multi-agent
+  - security
+bundles:
+  - extensions-mcp
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/plugin-only-agent-surface-gating/SKILL.md
+  codex: agents/codex/skills/plugin-only-agent-surface-gating/SKILL.md
+  claude_code: agents/claude-code/skills/plugin-only-agent-surface-gating/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: extensions-mcp
+  review_status: curated

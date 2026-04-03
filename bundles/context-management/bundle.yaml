@@ -7,9 +7,14 @@ skills:
   - api-round-ptl-retry-truncation
   - autocompact-circuit-breaker
   - autocompact-recursion-guards
+  - cache-edit-pin-and-replay
+  - largest-first-context-shedding
   - reserved-summary-output-budget
   - token-budgeted-compaction-with-reinjection
   - progressive-compaction-prompt
   - compactable-tool-whitelist-gating
   - time-gap-cache-expiry-microcompact
   - turn-scoped-memory-prefetch-with-disposal
+  - session-memory-first-compaction
+  - relevant-memory-selection-by-header
+  - forked-auto-memory-extraction

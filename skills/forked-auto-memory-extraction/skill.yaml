@@ -1,0 +1,26 @@
+slug: forked-auto-memory-extraction
+name: "Forked Auto Memory Extraction"
+summary: "Run memory harvesting in a fenced background agent after the main turn so the primary loop stays responsive."
+when_to_use: "Use when memory extraction should happen after the main turn in an isolated child agent instead of delaying the primary conversation loop."
+category: multi-agent
+maturity: core
+tags:
+  - multi-agent
+  - memory
+  - starter
+bundles:
+  - starter
+  - multi-agent
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/forked-auto-memory-extraction/SKILL.md
+  codex: agents/codex/skills/forked-auto-memory-extraction/SKILL.md
+  claude_code: agents/claude-code/skills/forked-auto-memory-extraction/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

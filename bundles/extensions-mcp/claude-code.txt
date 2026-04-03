@@ -1,2 +1,4 @@
 agents/claude-code/skills/three-layer-extension-sync
 agents/claude-code/skills/headless-interactive-reconcile-parity
+agents/claude-code/skills/mcp-skill-vs-prompt-discovery-filtering
+agents/claude-code/skills/plugin-only-agent-surface-gating

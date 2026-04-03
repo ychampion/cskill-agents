@@ -7,3 +7,4 @@ agents/claude-code/skills/declarative-read-only-command-allowlists
 agents/claude-code/skills/cross-shell-command-safety-maps
 agents/claude-code/skills/remote-safe-command-allowlist
 agents/claude-code/skills/auto-memory-tool-permission-fencing
+agents/claude-code/skills/plan-mode-permission-gating

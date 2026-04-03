@@ -11,3 +11,4 @@ skills:
   - cross-shell-command-safety-maps
   - remote-safe-command-allowlist
   - auto-memory-tool-permission-fencing
+  - plan-mode-permission-gating

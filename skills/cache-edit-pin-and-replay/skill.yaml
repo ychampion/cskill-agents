@@ -1,0 +1,24 @@
+slug: cache-edit-pin-and-replay
+name: "Cache Edit Pin and Replay"
+summary: "Queue cache edits once, pin them to message positions, and replay them across turns instead of regenerating them on every retry."
+when_to_use: "Use when cache-editing or microcompact flows must preserve deletion edits across retries, resumes, or later turns."
+category: context-management
+maturity: core
+tags:
+  - context-management
+  - cache-editing
+  - agent-runtime
+bundles:
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/cache-edit-pin-and-replay/SKILL.md
+  codex: agents/codex/skills/cache-edit-pin-and-replay/SKILL.md
+  claude_code: agents/claude-code/skills/cache-edit-pin-and-replay/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated
