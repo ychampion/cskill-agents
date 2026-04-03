@@ -38,6 +38,14 @@ Install a curated bundle with the helper script:
 ./scripts/install-bundle.sh claude-code starter
 ```
 
+## What You Can Build
+
+- Coding CLI command surfaces with dynamic skill loading, cache-safe registries, and curated slash-command discovery
+- Tool runners with concurrency-safe batching, ordered streaming, output persistence, and deterministic budgeting
+- Long-running agent sessions with compaction, memory prefetch, retry control, and stable session state
+- Multi-agent systems with isolated child contexts, scoped MCP clients, transcript sidechains, and lifecycle cleanup
+- Remote-safe bridges and terminal interfaces with capability filtering, privacy-aware init payloads, and motion-aware terminal UI
+
 ## What This Repo Is
 
 - A curated distribution repo built from a larger authoring corpus.
