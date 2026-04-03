@@ -7,19 +7,19 @@ metadata:
 
 # SKILL: Concurrency-Safe Tool Batching
 **Domain:** tool-orchestration  
-**Trigger:** Turn-level toolUse collections that mix read-only calls with ones that mutate state or require exclusive execution.  
+**Trigger:** Use when one turn contains multiple tool calls and some are safe to run together while others mutate state or require exclusive execution.  
 **Source Pattern:** Distilled from reviewed tool execution, streaming, persistence, and output-budget implementations.
 
 ## Core Method
-Partition the incoming toolUse messages into successive batches where each batch is either a single non-read-only toolRun or a series of read-only tools. Use a schema that evaluates is concurrency safe per batch by validating the tool’s own schema and is concurrency safe hook. Execute safe batches concurrently and accumulate their context modifiers after they finish before moving on, while forcing unsafe batches to run serially so they have exclusive access and the output ordering is kept stable.
+Partition the requested tool calls into successive batches where each batch is either a set of read-only calls that may run together or a single exclusive call that must run alone. Decide concurrency safety from each tool’s declared behavior and validated inputs, not from naming conventions. Execute safe batches in parallel, then apply any shared-context updates only after the whole batch completes. Run mutating or stateful tools one at a time so ordering and side effects remain deterministic.
 
 ## Key Rules
-- Determine is concurrency safe by parsing each tool’s input through its schema and guarding against is concurrency safe exceptions; treat errors as unsafe.
+- Treat a tool as concurrency-safe only after validating its input and checking its declared safety rules; if anything is ambiguous, fall back to serial execution.
 - Append queued context modifiers from concurrent batches after they finish so the shared tool use context stays consistent before the next batch.
 - Always reorder only read-only batches; non-read-only batches must run on their own and update context inline so ordering and side effects remain deterministic.
 
 ## Example Application
-When building a tool runner for a CLI agent, follow this pattern by first checking each requested tool for read-only eligibility, batched read-only ones together, and run them through promise all while serializing writers; this keeps parallelism on safe paths and ensures serial ordering for mutating tools.
+When building a CLI tool runner, first group together safe read-only lookups like file reads or searches, run that group in parallel, then execute any edit, write, or stateful shell step on its own. This gives you parallelism where it is safe without letting mutating tools race each other.
 
 ## Anti-Patterns (What NOT to do)
 - Assume all tools are concurrency-safe and run them in parallel, which can break stateful tools like shell edits.

@@ -11,10 +11,10 @@ metadata:
 **Source Pattern:** Distilled from reviewed permission, shell-safety, and worktree-management implementations.
 
 ## Core Method
-Wrap every tool call through a permission guard that allows only Read/Grep/Glob or read-only Bash commands, blocks edits outside the auto-memory directory, and falls back to Tool permission denial messages for disallowed actions. For Bash, parse the input and rely on bash tool is read only; for Write/Edit/FileEdit, ensure the `file_path` argument points inside the project’s memory folder. Reject everything else with a consistent denial so the forked agent never opens insecure shells.
+Route every tool call from the auto-memory agent through one permission adapter. That adapter should allow only safe read operations plus tightly scoped writes into the memory directory, while rejecting all other commands with a consistent denial message. Shell access must be limited to a vetted read-only subset, and file edits must be checked against the memory path boundary before execution. This keeps the background extractor useful without giving it broad workspace or shell power.
 
 ## Key Rules
-- Provide the create auto mem can use tool wrapper to the forked agent so tool requests are validated in a shared helper before execution.
+- Give the forked agent one shared permission wrapper so every tool request is validated the same way before execution.
 - Allow REPL only if it is necessary; the inner REPL will re-invoke the same guard so the policy stays intact.
 - On denial, emit a clear message referencing the restricted commands list so the agent knows that only auto-memory-safe tools remain.
 - Reject any Write/Edit outside memory, and treat `Allow` decisions as explicit acknowledgments that the target path belongs to the auto-memory directory.
@@ -24,4 +24,4 @@ When spinning up an auto-memory extractor, pass this guard into the agent’s co
 
 ## Anti-Patterns (What NOT to do)
 - Don’t grant the forked agent unrestricted Bash access; even read-only commands should be explicitly vetted to prevent injection.
-- Don’t assume tool schema validation is optional; always parse and re-evaluate is concurrency safe/is read only before letting a tool run.
+- Don’t assume tool schema validation alone is enough; permission policy still needs to re-check whether the action is safe and properly scoped.

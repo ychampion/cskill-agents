@@ -21,7 +21,7 @@ Walk the message stream and emit a new bucket every time a fresh assistant messa
 - Name each bucket explicitly when logging so retry diagnostics can report the round that triggered the fallback.
 
 ## Example Application
-When a compaction attempt hits prompt too long, call group messages by api round to isolate the round that contained the offending assistant response, then drop just that bucket before retrying.
+When a compaction attempt hits prompt-too-long, first group the transcript into API rounds, identify the round that introduced the oversized assistant response, and drop or compact only that round before retrying.
 
 ## Anti-Patterns (What NOT to do)
 - Do not group by user turns or by time because API chunks can span multiple user messages and tool results.

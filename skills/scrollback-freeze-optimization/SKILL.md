@@ -14,8 +14,8 @@ metadata:
 Wrap any timer-driven subtree with a viewport-aware container that caches the last visible React element in a ref. When the viewport reports hidden, always return the cached node instead of the live children; React's diffing sees no change and the terminal renderer skips the expensive full-screen redraw.
 
 ## Key Rules
-- Use use terminal viewport to watch is visible and keep an explicit ref for the last rendered children.
-- Only update the cache when the element is visible; otherwise return cached current so React reuses the reference.
+- Use viewport visibility for the specific widget you are freezing and keep an explicit reference to the last rendered children.
+- Only update the cache while the element is visible; otherwise return the cached subtree so React can reuse the same reference.
 - Disable memoization on the freeze wrapper (explicit `'use no memo'`) so React doesn't bail out before the cached reference is read.
 - Keep the cached node simple so it can be safely reused after long pauses and still produce the correct layout.
 

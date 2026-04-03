@@ -11,7 +11,7 @@ metadata:
 **Source Pattern:** Distilled from reviewed permission, shell-safety, and worktree-management implementations.
 
 ## Core Method
-Define each safe command as an entry keyed by its full name (`git diff`, `docker logs`, `rg`) and supply a safe flags map plus optional callbacks such as the additional command is dangerous callback. Build every shell tool by filtering commands through these declarative entries rather than scattering permission logic across helpers; the tool simply looks up the config, validates flags, and rejects commands not listed.
+Define each safe command as a declarative entry keyed by its full name such as `git diff`, `docker logs`, or `rg`. Each entry should describe allowed flags, argument rules, and any extra validation needed for edge cases. Build the shell policy layer by consulting these tables instead of scattering safety logic across the executor. The executor then only needs to look up the command, validate its flags against the declarative spec, and reject anything not explicitly allowed.
 
 ## Key Rules
 - Keep every command entry immutable so runtime validators can memoize them and share the same configuration between BashTool and PowerShellTool.
@@ -20,8 +20,8 @@ Define each safe command as an entry keyed by its full name (`git diff`, `docker
 - Treat unknown commands or flags as rejects, making the declarative tables the only source of truth for allowed operations.
 
 ## Example Application
-When building a new shell agent, load the read-only commands map, call validate flags with the command’s tokenized args, and propagate the safe list to tools bash so the agent can only run commands the security spec enumerates.
+When building a new shell agent, load the read-only command map, validate the tokenized flags for each request against that map, and allow execution only when the command matches an approved entry. This makes the policy auditable and consistent across shells.
 
 ## Anti-Patterns (What NOT to do)
 - Don’t hardwire flag lists inside the tool executor; that risks drift between `git diff` and the security policy.
-- Don’t extend the tables without recording the reason and verifying every new flag type (`number`, `string`, etc.) still passes the validate flag argument checks.
+- Don’t extend the tables casually; every new command or flag should be justified and validated against the same argument rules as the rest of the policy.

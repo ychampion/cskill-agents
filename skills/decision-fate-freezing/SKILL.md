@@ -11,16 +11,16 @@ metadata:
 **Source Pattern:** Distilled from reviewed tool execution, streaming, persistence, and output-budget implementations.
 
 ## Core Method
-Track every processed `tool_use_id` inside content replacement state so that once a result is marked as `seen` its fate is frozen: previously persisted blocks always reapplied via the `replacements` map, and previously unreplaced blocks are never reconsidered. apply tool result budget clones or reconstructs this state for forks and resumed threads so the same map/set pair stays in sync with the cached prompt prefix and enforces a deterministic budget outcome every turn.
+Track every processed tool-result ID in durable budgeting state. Once a result has been evaluated, freeze its fate: either it stays inline forever or it is always replaced by the same persisted preview. Retries, forks, and resumed sessions must inherit that state and reapply the same decision instead of recalculating it. This keeps prompt shape stable and prevents the same result from flipping between full content and preview across turns.
 
 ## Key Rules
-- Introduce seen ids entries as soon as a candidate is eligible, even if it does not get persisted, so later turns treat the ID as frozen and never change whether it was replaced.
-- Populate `replacements` only when persistence succeeds and synchronize that update with the seen ids entry so clones see both or neither, keeping decisions atomic.
-- Clone or reconstruct the state (clone content replacement state, reconstruct content replacement state) when forking threads so agentSummary, background agents, and resumed sessions inherit the exact same mapping and do not recompute different decisions later.
+- Mark an ID as decided as soon as it becomes eligible, even if the outcome is “leave inline,” so later turns never re-open the decision.
+- Store replacement previews only after persistence succeeds, and keep the decision marker and replacement payload in sync.
+- Clone or reconstruct this state when forking or resuming so child threads inherit the exact same budgeting history.
 - Log or persist every new replacement so resumes reapply the same preview string and the prompt cache stays intact.
 
 ## Example Application
-enforce tool result budget feeds content replacement state into apply tool result budget; every time a new user message triggers the budget, the helper marks the new IDs as seen and either writes replacements or leaves them untouched. When a resume or fork reuses that state, the previous decisions are re-applied byte-for-byte rather than recalculated.
+If a large tool result is replaced with a persisted preview on turn 20, later retries and child agents should reuse that exact preview rather than reconsidering whether the full result can fit inline. The budgeting outcome for that result becomes part of the session state.
 
 ## Anti-Patterns (What NOT to do)
 - Do not mutate seen ids only after persistence finishes, or a concurrent reader may treat the ID as fresh and replace it again on the same turn.

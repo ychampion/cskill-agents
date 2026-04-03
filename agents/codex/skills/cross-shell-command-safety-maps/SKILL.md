@@ -11,16 +11,16 @@ metadata:
 **Source Pattern:** Distilled from reviewed permission, shell-safety, and worktree-management implementations.
 
 ## Core Method
-Maintain a single list of cross-shell safe commands, run UNC-detection logic that matches `\\server\share` and server share, and reuse normalized path guards for config files/directories across both shells. Let both tools import the same maps so they refuse commands or file paths that fail the UNC/malicious config checks, and keep the regex/flag definitions centralized to avoid drift.
+Maintain one shared policy source for command allowlists, UNC-path rejection, and sensitive-path checks, then have both the Bash and PowerShell entrypoints consume that same policy. Each shell may parse its own command syntax, but the decisions about what is read-only, what path patterns are dangerous, and when to reject remote shares should come from the same central maps. This keeps cross-platform behavior aligned and prevents one shell surface from quietly drifting into a weaker security posture.
 
 ## Key Rules
-- Only include commands that behave identically across bash and PowerShell; store them in external readonly commands so both tools can look them up without duplication.
+- Only include commands that behave predictably across both shells; the shared allowlist should stay conservative and portable.
 - Perform UNC detection before executing commands on Windows, covering backslash, forward slash, mixed separators, IPv4/IPv6 addresses, and WebDAV patterns.
-- Normalize paths via normalize case for comparison and reuse the dangerous files directories lists to reject edits/safe flag suggestions that touch sensitive config files.
+- Normalize candidate paths before comparison and reuse the same sensitive-path deny rules in both shell tools.
 - Keep these maps static so callers can memoize them and still share them among multiple shell entry points.
 
 ## Example Application
-When launching either shell tool, load external readonly commands and call contains vulnerable unc path on every candidate path; whenever the path matches a dangerous file or UNC, reject the command and surface the same reason to both bash and PowerShell.
+When launching either shell tool, load the shared read-only command map and run the same UNC-path and sensitive-path checks before execution. A path that is rejected in Bash should be rejected for the same reason in PowerShell.
 
 ## Anti-Patterns (What NOT to do)
 - Don’t re-derive UNC heuristics per tool; this invites Windows credential-exfiltration bugs.

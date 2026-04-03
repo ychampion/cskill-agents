@@ -1,5 +1,7 @@
 # Codex-Compatible Skills
 
+Run these commands from the repo root.
+
 Install a single skill:
 
 ```powershell

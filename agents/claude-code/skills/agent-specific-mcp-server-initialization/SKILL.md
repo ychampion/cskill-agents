@@ -11,10 +11,10 @@ metadata:
 **Source Pattern:** Distilled from reviewed subagent orchestration, isolation, and lifecycle implementations.
 
 ## Core Method
-Iterate the agent’s mcp servers, resolve named references via the shared MCP config cache, and treat inline specs as newly created clients that get cleaned up after the agent finishes. Merge the resulting clients and tools with the parent context, skipping the entire block if no servers are declared. Maintain a newly created clients list so only agent-owned MCPs are torn down, while shared ones stay available to the parent.
+Iterate the servers declared by the child agent, resolve named references from shared MCP configuration, and treat inline declarations as new agent-owned connections. Merge the resulting clients and tools into the inherited parent context, but keep track of which connections were created specifically for that child agent. When the agent ends, tear down only those agent-owned connections while leaving inherited shared clients intact. If no extra servers are declared, return the parent context unchanged.
 
 ## Key Rules
-- Short-circuit when mcp servers is empty and return the parent clients unchanged.
+- Short-circuit when the agent declares no extra MCP servers and return the inherited clients unchanged.
 - For string specs, reuse memoized MCP configs; for inline objects, mark the resulting clients as newly created so their cleanup runs after the agent ends.
 - Always return the merged client list plus the fetched tools, and expose a cleanup closure that only targets the newly created clients.
 - Guard the loop with logging for missing configs so failures degrade gracefully instead of throwing.
@@ -23,5 +23,5 @@ Iterate the agent’s mcp servers, resolve named references via the shared MCP c
 When implementing a custom agent that needs access to an inline MCP server, plug into this skill to merge the new server with the parent clients, reuse any shared configs, and ensure only the inline connection runs its cleanup path.
 
 ## Anti-Patterns (What NOT to do)
-- Don’t rebuild the entire MCP client list from scratch every turn; reuse parentClients and append the new ones instead.
+- Don’t rebuild the entire MCP client list from scratch every turn; reuse the inherited parent clients and append the new ones instead.
 - Don’t forget to clean up inline MCP servers; leaking them leaves dangling connections and stale credentials.
