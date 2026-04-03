@@ -1,6 +1,6 @@
 # cskill-agents
 
-Curated, public-safe agent skills for building and improving coding CLIs, terminal tools, context engines, remote bridges, and multi-agent runtimes.
+Curated, public-safe agent skills for building and improving coding CLIs, terminal tools, context engines, remote bridges, and multi-agent runtimes. (inspired from Claude Code's source)
 
 This repo contains original, method-level skill files distilled from reviewed implementations. It does not ship upstream source code, copied comments, tests, prompts, logos, or proprietary assets.
 
