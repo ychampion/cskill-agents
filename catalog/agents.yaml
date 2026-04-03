@@ -1,0 +1,17 @@
+agents:
+  - id: codex
+    label: Codex-compatible
+    install_roots:
+      - ~/.codex/skills
+      - %USERPROFILE%\\.codex\\skills
+    notes:
+      - Copy one folder per skill into your Codex skills directory.
+      - This repo is independent and only provides a compatible folder layout.
+  - id: claude-code
+    label: Claude Code-compatible
+    install_roots:
+      - ~/.claude/skills
+      - %USERPROFILE%\\.claude\\skills
+    notes:
+      - Copy one folder per skill into your Claude skills directory.
+      - This repo is independent and only provides a compatible folder layout.

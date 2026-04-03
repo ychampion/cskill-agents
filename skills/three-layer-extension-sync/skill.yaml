@@ -1,0 +1,23 @@
+slug: three-layer-extension-sync
+name: "Three-Layer Extension Sync"
+summary: "Model extension lifecycle as intent, materialization, and active runtime layers, then sync each layer with dedicated transitions."
+when_to_use: "Apply when extensions exist simultaneously as declared settings, on-disk installs, and live runtime components, and those layers must stay coherent."
+category: extensions-mcp
+maturity: recommended
+tags:
+  - extensions-mcp
+  - agent-runtime
+bundles:
+  - extensions-mcp
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/three-layer-extension-sync/SKILL.md
+  codex: agents/codex/skills/three-layer-extension-sync/SKILL.md
+  claude_code: agents/claude-code/skills/three-layer-extension-sync/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: extensions-mcp
+  review_status: curated

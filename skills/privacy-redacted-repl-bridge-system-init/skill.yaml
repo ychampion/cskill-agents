@@ -1,0 +1,25 @@
+slug: privacy-redacted-repl-bridge-system-init
+name: "Privacy-Redacted REPL Bridge System Init"
+summary: "Reuse one `system/init` payload shape across trusted and remote transports, but redact tool, MCP, and plugin metadata when the bridge path would leak local integrations or filesystem paths."
+when_to_use: "Use when the same session-init or capability payload is emitted to both trusted SDK/internal consumers and remote transports that may persist or forward the metadata."
+category: remote-bridge
+maturity: core
+tags:
+  - remote-bridge
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - remote-bridge
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/privacy-redacted-repl-bridge-system-init/SKILL.md
+  codex: agents/codex/skills/privacy-redacted-repl-bridge-system-init/SKILL.md
+  claude_code: agents/claude-code/skills/privacy-redacted-repl-bridge-system-init/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: remote-bridge
+  review_status: curated

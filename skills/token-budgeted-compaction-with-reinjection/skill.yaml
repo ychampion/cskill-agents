@@ -1,0 +1,25 @@
+slug: token-budgeted-compaction-with-reinjection
+name: "Token Budgeted Compaction With Reinjection"
+summary: "Keep compaction budgets under control by compacting incrementally and reinjecting truncated attachments only when the reasoning surface remains stable."
+when_to_use: "Use when session history is growing toward the API limit and you need a safe way to trim older context while still reinjecting critical artifacts like skill metadata."
+category: context-management
+maturity: core
+tags:
+  - context-management
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/token-budgeted-compaction-with-reinjection/SKILL.md
+  codex: agents/codex/skills/token-budgeted-compaction-with-reinjection/SKILL.md
+  claude_code: agents/claude-code/skills/token-budgeted-compaction-with-reinjection/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated

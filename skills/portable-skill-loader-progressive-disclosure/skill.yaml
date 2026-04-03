@@ -1,0 +1,25 @@
+slug: portable-skill-loader-progressive-disclosure
+name: "Portable Skill Loader Progressive Disclosure"
+summary: "Keep the universal skill compact yet discoverable by loading minimal frontmatter first and heavy content on demand."
+when_to_use: "Use when an agent must scan thousands of skills but only load detailed prompts for the handful that are actually invoked."
+category: command-surfaces
+maturity: core
+tags:
+  - command-surfaces
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - command-surfaces
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/portable-skill-loader-progressive-disclosure/SKILL.md
+  codex: agents/codex/skills/portable-skill-loader-progressive-disclosure/SKILL.md
+  claude_code: agents/claude-code/skills/portable-skill-loader-progressive-disclosure/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: command-surfaces
+  review_status: curated

@@ -1,0 +1,23 @@
+slug: circular-safe-tool-registry-loading
+name: "Circular-Safe Tool Registry Loading"
+summary: "Safely assemble the tool registry when optional tools have circular dependencies or heavy side effects."
+when_to_use: "Use when tools reference each other (e.g., `TeamCreateTool` ↔ `tools.ts`) or only exist under feature flags, and you still need a single exhaustive registry."
+category: tool-orchestration
+maturity: recommended
+tags:
+  - tool-orchestration
+  - agent-runtime
+bundles:
+  - tool-orchestration
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/circular-safe-tool-registry-loading/SKILL.md
+  codex: agents/codex/skills/circular-safe-tool-registry-loading/SKILL.md
+  claude_code: agents/claude-code/skills/circular-safe-tool-registry-loading/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: tool-orchestration
+  review_status: curated

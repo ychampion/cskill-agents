@@ -1,0 +1,25 @@
+slug: reserved-summary-output-budget
+name: "Reserved Summary Output Budget"
+summary: "Reserve part of the context window for summary output so proactive compaction does not kill the response budget."
+when_to_use: "Apply when proving that proactive compaction must shrink the usable context window to keep the summary output under a known token budget."
+category: context-management
+maturity: core
+tags:
+  - context-management
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/reserved-summary-output-budget/SKILL.md
+  codex: agents/codex/skills/reserved-summary-output-budget/SKILL.md
+  claude_code: agents/claude-code/skills/reserved-summary-output-budget/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated

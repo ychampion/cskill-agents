@@ -1,0 +1,23 @@
+slug: append-only-sidechain-transcripts
+name: "Append-Only Sidechain Transcripts"
+summary: "Persist subagent transcripts as an append-only ordered log so forks, resumes, and sidechain readers can replay history without duplication."
+when_to_use: "Subagent transcript persistence must stay append-only so forked history can be resumed and sidechain readers see messages in strict chronological order."
+category: multi-agent
+maturity: recommended
+tags:
+  - multi-agent
+  - agent-runtime
+bundles:
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/append-only-sidechain-transcripts/SKILL.md
+  codex: agents/codex/skills/append-only-sidechain-transcripts/SKILL.md
+  claude_code: agents/claude-code/skills/append-only-sidechain-transcripts/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

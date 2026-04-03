@@ -1,0 +1,2 @@
+agents/codex/skills/three-layer-extension-sync
+agents/codex/skills/headless-interactive-reconcile-parity

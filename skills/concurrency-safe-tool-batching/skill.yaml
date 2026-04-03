@@ -1,0 +1,25 @@
+slug: concurrency-safe-tool-batching
+name: "Concurrency-Safe Tool Batching"
+summary: "Group tool calls into concurrency-safe batches to run read-only calls in parallel while serializing non-read-only work."
+when_to_use: "Turn-level toolUse collections that mix read-only calls with ones that mutate state or require exclusive execution."
+category: tool-orchestration
+maturity: core
+tags:
+  - tool-orchestration
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - tool-orchestration
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/concurrency-safe-tool-batching/SKILL.md
+  codex: agents/codex/skills/concurrency-safe-tool-batching/SKILL.md
+  claude_code: agents/claude-code/skills/concurrency-safe-tool-batching/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: tool-orchestration
+  review_status: curated

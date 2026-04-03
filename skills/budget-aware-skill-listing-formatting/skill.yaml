@@ -1,0 +1,23 @@
+slug: budget-aware-skill-listing-formatting
+name: "Budget-Aware Skill Listing Formatting"
+summary: "Derive the active model context budget at runtime and format skill listings to fit it instead of emitting raw command sets."
+when_to_use: "Apply when a skill or command listing must fit the active model's real context budget instead of assuming a fixed token allowance."
+category: command-surfaces
+maturity: recommended
+tags:
+  - command-surfaces
+  - agent-runtime
+bundles:
+  - command-surfaces
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/budget-aware-skill-listing-formatting/SKILL.md
+  codex: agents/codex/skills/budget-aware-skill-listing-formatting/SKILL.md
+  claude_code: agents/claude-code/skills/budget-aware-skill-listing-formatting/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: command-surfaces
+  review_status: curated

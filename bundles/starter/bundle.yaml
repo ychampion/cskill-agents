@@ -1,0 +1,33 @@
+id: starter
+name: "Starter"
+description: "A launch set of high-value skills for agentic coding CLIs, context control, safe tool use, and remote surfaces."
+skills:
+  - portable-skill-loader-progressive-disclosure
+  - project-root-scoped-local-skill-loading
+  - memoized-command-source-aggregation
+  - dynamic-skill-insertion-before-builtins
+  - layered-command-cache-invalidation
+  - descriptive-skill-surface-admission
+  - concurrency-safe-tool-batching
+  - ordered-streaming-tool-execution
+  - progress-first-tool-emission
+  - required-argument-aware-flag-validation
+  - idempotent-tool-result-persistence
+  - conversation-engine-persistent-session-state
+  - api-round-message-grouping
+  - autocompact-circuit-breaker
+  - reserved-summary-output-budget
+  - token-budgeted-compaction-with-reinjection
+  - turn-scoped-memory-prefetch-with-disposal
+  - additive-agent-tool-surface-construction
+  - permission-overlay-inheritance
+  - lifecycle-scoped-resource-cleanup
+  - fast-worktree-reuse-with-head-pointer-checks
+  - declarative-read-only-command-allowlists
+  - remote-safe-command-allowlist
+  - bridge-origin-safe-slash-override
+  - shared-system-init-shape-parity
+  - privacy-redacted-repl-bridge-system-init
+  - ansi-safe-border-caption-embedding
+  - wrapped-text-style-preservation
+  - capability-based-spinner-glyph-selection

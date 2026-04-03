@@ -1,0 +1,9 @@
+agents/claude-code/skills/canonical-worktree-path-normalization
+agents/claude-code/skills/fast-worktree-reuse-with-head-pointer-checks
+agents/claude-code/skills/safe-worktree-slug-validation
+agents/claude-code/skills/case-normalized-sensitive-path-guards
+agents/claude-code/skills/dangerous-config-file-protection
+agents/claude-code/skills/declarative-read-only-command-allowlists
+agents/claude-code/skills/cross-shell-command-safety-maps
+agents/claude-code/skills/remote-safe-command-allowlist
+agents/claude-code/skills/auto-memory-tool-permission-fencing

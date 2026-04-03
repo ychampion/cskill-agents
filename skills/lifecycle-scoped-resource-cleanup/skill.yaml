@@ -1,0 +1,25 @@
+slug: lifecycle-scoped-resource-cleanup
+name: "Lifecycle-Scoped Resource Cleanup"
+summary: "Release every resource allocated to a child agent inside one unconditional cleanup path so finished or aborted runs leave no lingering hooks, watchers, or background jobs."
+when_to_use: "Each agent run, regardless of outcome, must unwind resources reserved for its lifetime without assuming the parent session will later re-claim them."
+category: multi-agent
+maturity: core
+tags:
+  - multi-agent
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/lifecycle-scoped-resource-cleanup/SKILL.md
+  codex: agents/codex/skills/lifecycle-scoped-resource-cleanup/SKILL.md
+  claude_code: agents/claude-code/skills/lifecycle-scoped-resource-cleanup/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

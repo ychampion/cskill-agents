@@ -1,0 +1,13 @@
+name: public-safety
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  public-safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check public-safe artifacts
+        run: bash scripts/check-public-safety.sh

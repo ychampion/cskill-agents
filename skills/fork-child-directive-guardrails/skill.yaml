@@ -1,0 +1,23 @@
+slug: fork-child-directive-guardrails
+name: "Fork Child Directive Guardrails"
+summary: "Keep fork-decoupled workers strictly bounded by directive text and cache sharing requirements."
+when_to_use: "Apply this when a forked sub-agent inherits a conversation and must obey boilerplate guard text, cache-safe output, and explicit directive rules before running."
+category: multi-agent
+maturity: recommended
+tags:
+  - multi-agent
+  - agent-runtime
+bundles:
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/fork-child-directive-guardrails/SKILL.md
+  codex: agents/codex/skills/fork-child-directive-guardrails/SKILL.md
+  claude_code: agents/claude-code/skills/fork-child-directive-guardrails/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

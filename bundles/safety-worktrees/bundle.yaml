@@ -1,0 +1,13 @@
+id: safety-worktrees
+name: "Safety And Worktrees"
+description: "Permission fences, shell safety, path guards, and worktree reuse patterns."
+skills:
+  - canonical-worktree-path-normalization
+  - fast-worktree-reuse-with-head-pointer-checks
+  - safe-worktree-slug-validation
+  - case-normalized-sensitive-path-guards
+  - dangerous-config-file-protection
+  - declarative-read-only-command-allowlists
+  - cross-shell-command-safety-maps
+  - remote-safe-command-allowlist
+  - auto-memory-tool-permission-fencing

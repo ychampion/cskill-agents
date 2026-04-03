@@ -1,0 +1,23 @@
+slug: progressive-compaction-prompt
+name: "Progressive Compaction Prompt"
+summary: "Drive compaction summaries through structured prompts that sequence naming, artifacts, and invocation guidance before stripping analysis tags."
+when_to_use: "Apply when composing compact summaries so each round captures intent, context, per-step detail, and invocation cues before the final summary is stripped to user-friendly text."
+category: context-management
+maturity: recommended
+tags:
+  - context-management
+  - agent-runtime
+bundles:
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/progressive-compaction-prompt/SKILL.md
+  codex: agents/codex/skills/progressive-compaction-prompt/SKILL.md
+  claude_code: agents/claude-code/skills/progressive-compaction-prompt/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated

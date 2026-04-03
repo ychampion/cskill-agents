@@ -1,0 +1,25 @@
+slug: fast-worktree-reuse-with-head-pointer-checks
+name: "Fast Worktree Reuse With Head Pointer Checks"
+summary: "Resume existing worktrees quickly by checking stored HEAD pointers before fetching or recreating."
+when_to_use: "Apply when the user asks to enter or resume a named worktree and you want to avoid redundant `git fetch`/`git worktree add` calls if the worktree already exists."
+category: safety-worktrees
+maturity: core
+tags:
+  - safety-worktrees
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - safety-worktrees
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/fast-worktree-reuse-with-head-pointer-checks/SKILL.md
+  codex: agents/codex/skills/fast-worktree-reuse-with-head-pointer-checks/SKILL.md
+  claude_code: agents/claude-code/skills/fast-worktree-reuse-with-head-pointer-checks/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: safety-worktrees
+  review_status: curated

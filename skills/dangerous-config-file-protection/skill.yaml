@@ -1,0 +1,23 @@
+slug: dangerous-config-file-protection
+name: "Dangerous Config File Protection"
+summary: "Keep writes out of sensitive dotfiles and `.claude` folders by checking canonicalized basenames before granting permission."
+when_to_use: "Guard every filesystem modification that touches `.git`, `.claude`, `.gitconfig`, or other config-critical paths before running the tool."
+category: safety-worktrees
+maturity: recommended
+tags:
+  - safety-worktrees
+  - agent-runtime
+bundles:
+  - safety-worktrees
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/dangerous-config-file-protection/SKILL.md
+  codex: agents/codex/skills/dangerous-config-file-protection/SKILL.md
+  claude_code: agents/claude-code/skills/dangerous-config-file-protection/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: safety-worktrees
+  review_status: curated

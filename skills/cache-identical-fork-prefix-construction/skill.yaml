@@ -1,0 +1,23 @@
+slug: cache-identical-fork-prefix-construction
+name: "Cache Identical Fork Prefix Construction"
+summary: "Build forked conversation prefixes that stay identical across turns so prompt caching keeps working."
+when_to_use: "Use this when a forked agent must reuse the parent prompt cache and needs byte-identical prefixes for each invocation."
+category: multi-agent
+maturity: recommended
+tags:
+  - multi-agent
+  - agent-runtime
+bundles:
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/cache-identical-fork-prefix-construction/SKILL.md
+  codex: agents/codex/skills/cache-identical-fork-prefix-construction/SKILL.md
+  claude_code: agents/claude-code/skills/cache-identical-fork-prefix-construction/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

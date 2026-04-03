@@ -1,0 +1,23 @@
+slug: legacy-wire-name-compat-translation
+name: "Legacy Wire Name Compat Translation"
+summary: "Translate renamed internal identifiers back to their legacy wire names at serialization boundaries so patch-level consumers keep working until the planned version cutoff."
+when_to_use: "Apply when an internal tool, command, or capability identifier has been renamed, but existing SDK or UI consumers still depend on the old wire name and cannot safely break on a patch release."
+category: remote-bridge
+maturity: recommended
+tags:
+  - remote-bridge
+  - agent-runtime
+bundles:
+  - remote-bridge
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/legacy-wire-name-compat-translation/SKILL.md
+  codex: agents/codex/skills/legacy-wire-name-compat-translation/SKILL.md
+  claude_code: agents/claude-code/skills/legacy-wire-name-compat-translation/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: remote-bridge
+  review_status: curated

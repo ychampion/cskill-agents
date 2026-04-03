@@ -1,0 +1,23 @@
+slug: headless-interactive-reconcile-parity
+name: "Headless Interactive Reconcile Parity"
+summary: "Keep interactive and headless extension installation flows behaviorally aligned by sharing reconciliation logic and adapting only the outer contract."
+when_to_use: "Apply when the same extension installation lifecycle must work in both an interactive UI and a headless or automation mode."
+category: extensions-mcp
+maturity: recommended
+tags:
+  - extensions-mcp
+  - agent-runtime
+bundles:
+  - extensions-mcp
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/headless-interactive-reconcile-parity/SKILL.md
+  codex: agents/codex/skills/headless-interactive-reconcile-parity/SKILL.md
+  claude_code: agents/claude-code/skills/headless-interactive-reconcile-parity/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: extensions-mcp
+  review_status: curated

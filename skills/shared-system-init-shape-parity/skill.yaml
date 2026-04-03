@@ -1,0 +1,25 @@
+slug: shared-system-init-shape-parity
+name: "Shared System Init Shape Parity"
+summary: "Centralize `system/init` or capability payload construction in one builder so multiple transports emit identical schemas and only vary inputs or delivery."
+when_to_use: "Use when the same `system/init` or capability-announcement payload is emitted from multiple entrypoints or transports and downstream clients depend on one stable schema."
+category: remote-bridge
+maturity: core
+tags:
+  - remote-bridge
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - remote-bridge
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/shared-system-init-shape-parity/SKILL.md
+  codex: agents/codex/skills/shared-system-init-shape-parity/SKILL.md
+  claude_code: agents/claude-code/skills/shared-system-init-shape-parity/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: remote-bridge
+  review_status: curated

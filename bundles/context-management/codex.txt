@@ -1,0 +1,11 @@
+agents/codex/skills/conversation-engine-persistent-session-state
+agents/codex/skills/api-round-message-grouping
+agents/codex/skills/api-round-ptl-retry-truncation
+agents/codex/skills/autocompact-circuit-breaker
+agents/codex/skills/autocompact-recursion-guards
+agents/codex/skills/reserved-summary-output-budget
+agents/codex/skills/token-budgeted-compaction-with-reinjection
+agents/codex/skills/progressive-compaction-prompt
+agents/codex/skills/compactable-tool-whitelist-gating
+agents/codex/skills/time-gap-cache-expiry-microcompact
+agents/codex/skills/turn-scoped-memory-prefetch-with-disposal

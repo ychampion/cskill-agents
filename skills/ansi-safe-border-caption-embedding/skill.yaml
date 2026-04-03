@@ -1,0 +1,25 @@
+slug: ansi-safe-border-caption-embedding
+name: "ANSI-Safe Border Caption Embedding"
+summary: "Embed captions into terminal borders while preserving alignment, clipping, and color/dim semantics."
+when_to_use: "Apply when you must insert text into a border line (top or bottom) while preserving the border characters, colors, and alignment, even if the caption is wider than available space."
+category: terminal-ui
+maturity: core
+tags:
+  - terminal-ui
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - terminal-ui
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/ansi-safe-border-caption-embedding/SKILL.md
+  codex: agents/codex/skills/ansi-safe-border-caption-embedding/SKILL.md
+  claude_code: agents/claude-code/skills/ansi-safe-border-caption-embedding/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: terminal-ui
+  review_status: curated

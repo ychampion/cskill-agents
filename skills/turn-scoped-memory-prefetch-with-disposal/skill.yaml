@@ -1,0 +1,25 @@
+slug: turn-scoped-memory-prefetch-with-disposal
+name: "Turn-Scoped Memory Prefetch with Disposal"
+summary: "Start a non-blocking, turn-scoped memory prefetch that auto-disposes and only injects results once per turn."
+when_to_use: "When a turn needs contextual memory attachments but the main loop must stay streaming and reuse previous read state."
+category: context-management
+maturity: core
+tags:
+  - context-management
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/turn-scoped-memory-prefetch-with-disposal/SKILL.md
+  codex: agents/codex/skills/turn-scoped-memory-prefetch-with-disposal/SKILL.md
+  claude_code: agents/claude-code/skills/turn-scoped-memory-prefetch-with-disposal/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated

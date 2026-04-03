@@ -1,0 +1,9 @@
+agents/codex/skills/canonical-worktree-path-normalization
+agents/codex/skills/fast-worktree-reuse-with-head-pointer-checks
+agents/codex/skills/safe-worktree-slug-validation
+agents/codex/skills/case-normalized-sensitive-path-guards
+agents/codex/skills/dangerous-config-file-protection
+agents/codex/skills/declarative-read-only-command-allowlists
+agents/codex/skills/cross-shell-command-safety-maps
+agents/codex/skills/remote-safe-command-allowlist
+agents/codex/skills/auto-memory-tool-permission-fencing

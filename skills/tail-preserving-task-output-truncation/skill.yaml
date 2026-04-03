@@ -1,0 +1,23 @@
+slug: tail-preserving-task-output-truncation
+name: "Tail-Preserving Task Output Truncation"
+summary: "Persist tool outputs alongside metadata and truncate only the preview, ensuring the header points back to the persisted replica."
+when_to_use: "Use this when a task produces output larger than the session’s configured limit and you need to keep a concise preview plus a persistent archive."
+category: tool-orchestration
+maturity: recommended
+tags:
+  - tool-orchestration
+  - agent-runtime
+bundles:
+  - tool-orchestration
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/tail-preserving-task-output-truncation/SKILL.md
+  codex: agents/codex/skills/tail-preserving-task-output-truncation/SKILL.md
+  claude_code: agents/claude-code/skills/tail-preserving-task-output-truncation/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: tool-orchestration
+  review_status: curated

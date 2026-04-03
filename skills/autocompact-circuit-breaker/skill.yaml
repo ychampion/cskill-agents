@@ -1,0 +1,25 @@
+slug: autocompact-circuit-breaker
+name: "Autocompact Circuit Breaker"
+summary: "Break the autocompact retry loop after several consecutive failures to avoid hammering shared APIs."
+when_to_use: "Apply when autocompact failures repeat and the service must stop retrying to avoid API storms."
+category: context-management
+maturity: core
+tags:
+  - context-management
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/autocompact-circuit-breaker/SKILL.md
+  codex: agents/codex/skills/autocompact-circuit-breaker/SKILL.md
+  claude_code: agents/claude-code/skills/autocompact-circuit-breaker/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated

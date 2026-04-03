@@ -1,0 +1,23 @@
+slug: capability-pool-resolution
+name: "Capability Pool Resolution"
+summary: "Resolve an agent’s tool intent and disallowed lists into the actual pool the agent can use, honoring wildcard, async, and teammate allowances."
+when_to_use: "Apply this pattern when an agent declares requested tools/disallowedTools and you must compute the exact capabilities available to that agent thread."
+category: tool-orchestration
+maturity: recommended
+tags:
+  - tool-orchestration
+  - agent-runtime
+bundles:
+  - tool-orchestration
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/capability-pool-resolution/SKILL.md
+  codex: agents/codex/skills/capability-pool-resolution/SKILL.md
+  claude_code: agents/claude-code/skills/capability-pool-resolution/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: tool-orchestration
+  review_status: curated

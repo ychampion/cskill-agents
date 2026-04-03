@@ -1,0 +1,25 @@
+slug: descriptive-skill-surface-admission
+name: "Descriptive Skill Surface Admission"
+summary: "Use source-aware admission rules so trusted local skills can surface automatically while plugin or MCP-provided entries must supply explicit descriptive metadata."
+when_to_use: "Use when a command or skill catalog mixes trusted local sources with external providers and you need a predictable rule for which entries may appear without manual curation."
+category: command-surfaces
+maturity: core
+tags:
+  - command-surfaces
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - command-surfaces
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/descriptive-skill-surface-admission/SKILL.md
+  codex: agents/codex/skills/descriptive-skill-surface-admission/SKILL.md
+  claude_code: agents/claude-code/skills/descriptive-skill-surface-admission/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: command-surfaces
+  review_status: curated

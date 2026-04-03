@@ -1,0 +1,23 @@
+slug: api-round-ptl-retry-truncation
+name: "API-Round PTL Retry Truncation"
+summary: "On prompt-too-long retries, drop the oldest API-round groups first and inject a synthetic user preamble when needed so the summarize request stays valid."
+when_to_use: "Apply when the compaction request itself hits prompt-too-long and you need a last-resort retry path that removes old context without breaking API message validity."
+category: context-management
+maturity: recommended
+tags:
+  - context-management
+  - agent-runtime
+bundles:
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/api-round-ptl-retry-truncation/SKILL.md
+  codex: agents/codex/skills/api-round-ptl-retry-truncation/SKILL.md
+  claude_code: agents/claude-code/skills/api-round-ptl-retry-truncation/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated

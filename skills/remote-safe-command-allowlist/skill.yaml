@@ -1,0 +1,25 @@
+slug: remote-safe-command-allowlist
+name: "Remote Safe Command Allowlist"
+summary: "Define a narrow explicit set of commands that stay available in remote mode because they only affect local UI state, then reuse that set at startup and after handshake refinement."
+when_to_use: "Use when a remote session can expose a subset of local commands, but only commands with no filesystem, shell, IDE, or other host-bound dependencies should remain available."
+category: safety-worktrees
+maturity: core
+tags:
+  - safety-worktrees
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - safety-worktrees
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/remote-safe-command-allowlist/SKILL.md
+  codex: agents/codex/skills/remote-safe-command-allowlist/SKILL.md
+  claude_code: agents/claude-code/skills/remote-safe-command-allowlist/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: safety-worktrees
+  review_status: curated

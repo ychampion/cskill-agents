@@ -1,0 +1,23 @@
+slug: bridge-safe-command-advertising
+name: "Bridge Safe Command Advertising"
+summary: "Advertise only slash commands that a bridge client can actually invoke by filtering announcements with the same bridge-safety predicate used at execution time."
+when_to_use: "Use when a bridged or remote client receives an announced slash-command list and that list must stay aligned with the commands the runtime will actually execute for bridge-originated input."
+category: remote-bridge
+maturity: recommended
+tags:
+  - remote-bridge
+  - agent-runtime
+bundles:
+  - remote-bridge
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/bridge-safe-command-advertising/SKILL.md
+  codex: agents/codex/skills/bridge-safe-command-advertising/SKILL.md
+  claude_code: agents/claude-code/skills/bridge-safe-command-advertising/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: remote-bridge
+  review_status: curated

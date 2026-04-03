@@ -1,0 +1,15 @@
+id: context-management
+name: "Context Management"
+description: "Session state, compaction, reinjection, and memory prefetch patterns."
+skills:
+  - conversation-engine-persistent-session-state
+  - api-round-message-grouping
+  - api-round-ptl-retry-truncation
+  - autocompact-circuit-breaker
+  - autocompact-recursion-guards
+  - reserved-summary-output-budget
+  - token-budgeted-compaction-with-reinjection
+  - progressive-compaction-prompt
+  - compactable-tool-whitelist-gating
+  - time-gap-cache-expiry-microcompact
+  - turn-scoped-memory-prefetch-with-disposal

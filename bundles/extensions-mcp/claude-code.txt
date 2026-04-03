@@ -1,0 +1,2 @@
+agents/claude-code/skills/three-layer-extension-sync
+agents/claude-code/skills/headless-interactive-reconcile-parity

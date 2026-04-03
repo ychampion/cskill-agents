@@ -1,0 +1,11 @@
+agents/claude-code/skills/additive-agent-tool-surface-construction
+agents/claude-code/skills/agent-specific-mcp-server-initialization
+agents/claude-code/skills/cache-prefix-stability-for-subagents
+agents/claude-code/skills/cache-identical-fork-prefix-construction
+agents/claude-code/skills/permission-overlay-inheritance
+agents/claude-code/skills/fork-child-directive-guardrails
+agents/claude-code/skills/lifecycle-scoped-resource-cleanup
+agents/claude-code/skills/forked-skill-execution-with-isolated-context
+agents/claude-code/skills/append-only-sidechain-transcripts
+agents/claude-code/skills/trusted-frontmatter-gating
+agents/claude-code/skills/orphaned-tool-call-sanitizer

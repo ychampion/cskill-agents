@@ -1,0 +1,25 @@
+slug: dynamic-skill-insertion-before-builtins
+name: "Dynamic Skill Insertion Before Builtins"
+summary: "Merge runtime-discovered commands into an existing command registry by deduping them against the enabled base surface and inserting them at a stable boundary before built-in commands."
+when_to_use: "Use when commands can be discovered at runtime and must be added to a prebuilt command list without duplicating enabled entries or scrambling the established built-in ordering."
+category: command-surfaces
+maturity: core
+tags:
+  - command-surfaces
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - command-surfaces
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/dynamic-skill-insertion-before-builtins/SKILL.md
+  codex: agents/codex/skills/dynamic-skill-insertion-before-builtins/SKILL.md
+  claude_code: agents/claude-code/skills/dynamic-skill-insertion-before-builtins/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: command-surfaces
+  review_status: curated

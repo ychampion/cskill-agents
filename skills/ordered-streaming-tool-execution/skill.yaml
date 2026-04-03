@@ -1,0 +1,25 @@
+slug: ordered-streaming-tool-execution
+name: "Ordered Streaming Tool Execution"
+summary: "Buffer and execute streaming tool calls with concurrency awareness so results appear in request order even when multiple runners overlap."
+when_to_use: "Streaming toolUse input where progress must be shown in the original queue order, even if some tools run concurrently."
+category: tool-orchestration
+maturity: core
+tags:
+  - tool-orchestration
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - tool-orchestration
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/ordered-streaming-tool-execution/SKILL.md
+  codex: agents/codex/skills/ordered-streaming-tool-execution/SKILL.md
+  claude_code: agents/claude-code/skills/ordered-streaming-tool-execution/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: tool-orchestration
+  review_status: curated

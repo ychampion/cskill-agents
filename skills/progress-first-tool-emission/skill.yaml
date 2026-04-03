@@ -1,0 +1,25 @@
+slug: progress-first-tool-emission
+name: "Progress-First Tool Emission"
+summary: "Emit progress/value updates as soon as they arrive while still buffering final results and handling cancellations or sibling errors."
+when_to_use: "Streaming tool runners that produce progress messages or status updates alongside final tool results."
+category: tool-orchestration
+maturity: core
+tags:
+  - tool-orchestration
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - tool-orchestration
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/progress-first-tool-emission/SKILL.md
+  codex: agents/codex/skills/progress-first-tool-emission/SKILL.md
+  claude_code: agents/claude-code/skills/progress-first-tool-emission/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: tool-orchestration
+  review_status: curated

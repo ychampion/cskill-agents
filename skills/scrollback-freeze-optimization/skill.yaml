@@ -1,0 +1,23 @@
+slug: scrollback-freeze-optimization
+name: "Scrollback Freeze Optimization"
+summary: "Cache and reuse animated children once they slide into scrollback so terminal resets never occur."
+when_to_use: "Apply whenever you render active widgets that can scroll into terminal history and would otherwise force full-screen updates."
+category: terminal-ui
+maturity: recommended
+tags:
+  - terminal-ui
+  - agent-runtime
+bundles:
+  - terminal-ui
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/scrollback-freeze-optimization/SKILL.md
+  codex: agents/codex/skills/scrollback-freeze-optimization/SKILL.md
+  claude_code: agents/claude-code/skills/scrollback-freeze-optimization/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: terminal-ui
+  review_status: curated

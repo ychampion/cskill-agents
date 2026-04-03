@@ -1,0 +1,23 @@
+slug: trusted-frontmatter-gating
+name: "Trusted Frontmatter Gating"
+summary: "Gate frontmatter MCP servers, hooks, and skills behind admin trust when plugin-only or hook-only modes are active."
+when_to_use: "Apply this pattern when you are about to honor MCP servers, hooks, or skill preloads declared in an agent’s frontmatter while the session may be locked to plugin-only/customized trust settings."
+category: multi-agent
+maturity: recommended
+tags:
+  - multi-agent
+  - agent-runtime
+bundles:
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/trusted-frontmatter-gating/SKILL.md
+  codex: agents/codex/skills/trusted-frontmatter-gating/SKILL.md
+  claude_code: agents/claude-code/skills/trusted-frontmatter-gating/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

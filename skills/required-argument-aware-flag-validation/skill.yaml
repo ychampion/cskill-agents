@@ -1,0 +1,25 @@
+slug: required-argument-aware-flag-validation
+name: "Required Argument Aware Flag Validation"
+summary: "Walk command tokens while inspecting attached/inline arguments so validators never skip missing or dangerous flag values."
+when_to_use: "Apply this whenever flag validation cannot rely on shell parsers and must check `--flag=value`, combined short bundles, and missing arguments explicitly."
+category: tool-orchestration
+maturity: core
+tags:
+  - tool-orchestration
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - tool-orchestration
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/required-argument-aware-flag-validation/SKILL.md
+  codex: agents/codex/skills/required-argument-aware-flag-validation/SKILL.md
+  claude_code: agents/claude-code/skills/required-argument-aware-flag-validation/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: tool-orchestration
+  review_status: curated

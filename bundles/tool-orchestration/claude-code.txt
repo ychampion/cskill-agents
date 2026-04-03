@@ -1,0 +1,11 @@
+agents/claude-code/skills/concurrency-safe-tool-batching
+agents/claude-code/skills/ordered-streaming-tool-execution
+agents/claude-code/skills/progress-first-tool-emission
+agents/claude-code/skills/circular-safe-tool-registry-loading
+agents/claude-code/skills/capability-pool-resolution
+agents/claude-code/skills/required-argument-aware-flag-validation
+agents/claude-code/skills/idempotent-tool-result-persistence
+agents/claude-code/skills/modality-preserving-binary-offload
+agents/claude-code/skills/wire-shape-aligned-budgeting
+agents/claude-code/skills/tail-preserving-task-output-truncation
+agents/claude-code/skills/decision-fate-freezing

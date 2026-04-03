@@ -1,0 +1,25 @@
+slug: wrapped-text-style-preservation
+name: "Wrapped Text Style Preservation"
+summary: "Track per-character segments so wrapped or truncated text keeps its original colors and emphasis."
+when_to_use: "When you must wrap or truncate a styled text run but cannot afford to lose per-segment colors, links, or emphasis, especially inside terminals that split lines at wrap boundaries."
+category: terminal-ui
+maturity: core
+tags:
+  - terminal-ui
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - terminal-ui
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/wrapped-text-style-preservation/SKILL.md
+  codex: agents/codex/skills/wrapped-text-style-preservation/SKILL.md
+  claude_code: agents/claude-code/skills/wrapped-text-style-preservation/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: terminal-ui
+  review_status: curated

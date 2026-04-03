@@ -1,0 +1,23 @@
+slug: safe-worktree-slug-validation
+name: "Safe Worktree Slug Validation"
+summary: "Ensure Git worktree slugs can never escape the managed workspace or inject traversal."
+when_to_use: "Apply this when accepting user-provided prefixes for `EnterWorktree` and you need to guarantee no path traversal or invalid chars slip into the worktree directory."
+category: safety-worktrees
+maturity: recommended
+tags:
+  - safety-worktrees
+  - agent-runtime
+bundles:
+  - safety-worktrees
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/safe-worktree-slug-validation/SKILL.md
+  codex: agents/codex/skills/safe-worktree-slug-validation/SKILL.md
+  claude_code: agents/claude-code/skills/safe-worktree-slug-validation/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: safety-worktrees
+  review_status: curated

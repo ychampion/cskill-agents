@@ -1,0 +1,25 @@
+slug: declarative-read-only-command-allowlists
+name: "Declarative Read Only Command Allowlists"
+summary: "Express shell-command safety as declarative flag maps so tooling knows exactly what passes."
+when_to_use: "Use when you want tooling to enforce read-only shell commands by referencing a static map of command names, allowed flags, and supplemental callbacks."
+category: safety-worktrees
+maturity: core
+tags:
+  - safety-worktrees
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - safety-worktrees
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/declarative-read-only-command-allowlists/SKILL.md
+  codex: agents/codex/skills/declarative-read-only-command-allowlists/SKILL.md
+  claude_code: agents/claude-code/skills/declarative-read-only-command-allowlists/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: safety-worktrees
+  review_status: curated

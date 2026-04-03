@@ -1,0 +1,23 @@
+slug: local-and-mcp-skill-name-deduplication
+name: "Local-and-MCP Skill Name Deduplication"
+summary: "Merge local and MCP skill sources into one listing surface and dedupe by stable command name before announcing them."
+when_to_use: "Apply when a listing surface combines commands from multiple registries or providers and must avoid announcing the same user-facing capability twice."
+category: command-surfaces
+maturity: recommended
+tags:
+  - command-surfaces
+  - agent-runtime
+bundles:
+  - command-surfaces
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/local-and-mcp-skill-name-deduplication/SKILL.md
+  codex: agents/codex/skills/local-and-mcp-skill-name-deduplication/SKILL.md
+  claude_code: agents/claude-code/skills/local-and-mcp-skill-name-deduplication/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: command-surfaces
+  review_status: curated

@@ -1,0 +1,23 @@
+slug: slash-command-skill-classification-filter
+name: "Slash-Command Skill Classification Filter"
+summary: "Derive a slash-command skill surface from a broader prompt-command registry by requiring descriptive metadata, excluding builtins, and admitting only a controlled set of origins plus explicit user-only commands."
+when_to_use: "Use when a slash-command picker or human-facing skill list must be derived from a larger prompt-command registry without exposing builtin, undocumented, or wrongly sourced commands."
+category: command-surfaces
+maturity: recommended
+tags:
+  - command-surfaces
+  - agent-runtime
+bundles:
+  - command-surfaces
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/slash-command-skill-classification-filter/SKILL.md
+  codex: agents/codex/skills/slash-command-skill-classification-filter/SKILL.md
+  claude_code: agents/claude-code/skills/slash-command-skill-classification-filter/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: command-surfaces
+  review_status: curated

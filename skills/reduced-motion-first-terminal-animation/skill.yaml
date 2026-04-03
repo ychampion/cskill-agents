@@ -1,0 +1,23 @@
+slug: reduced-motion-first-terminal-animation
+name: "Reduced-Motion First Terminal Animation"
+summary: "Pause terminal animations when the user requests reduced motion, then resume cleanly without tearing the rest of the UI."
+when_to_use: "Build any animation that should stay dormant until the user explicitly opts into motion."
+category: terminal-ui
+maturity: recommended
+tags:
+  - terminal-ui
+  - agent-runtime
+bundles:
+  - terminal-ui
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/reduced-motion-first-terminal-animation/SKILL.md
+  codex: agents/codex/skills/reduced-motion-first-terminal-animation/SKILL.md
+  claude_code: agents/claude-code/skills/reduced-motion-first-terminal-animation/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: terminal-ui
+  review_status: curated

@@ -1,0 +1,11 @@
+agents/claude-code/skills/conversation-engine-persistent-session-state
+agents/claude-code/skills/api-round-message-grouping
+agents/claude-code/skills/api-round-ptl-retry-truncation
+agents/claude-code/skills/autocompact-circuit-breaker
+agents/claude-code/skills/autocompact-recursion-guards
+agents/claude-code/skills/reserved-summary-output-budget
+agents/claude-code/skills/token-budgeted-compaction-with-reinjection
+agents/claude-code/skills/progressive-compaction-prompt
+agents/claude-code/skills/compactable-tool-whitelist-gating
+agents/claude-code/skills/time-gap-cache-expiry-microcompact
+agents/claude-code/skills/turn-scoped-memory-prefetch-with-disposal

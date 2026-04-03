@@ -1,0 +1,25 @@
+slug: conversation-engine-persistent-session-state
+name: "Conversation Engine Persistent Session State"
+summary: "Keep session-level signals (messages, read caches, memory loads) alive across turns while letting per-turn caches reset for correctness."
+when_to_use: "Apply when architecting a conversation engine that must persist session context while allowing per-turn caches and abort controllers to restart cleanly."
+category: context-management
+maturity: core
+tags:
+  - context-management
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/conversation-engine-persistent-session-state/SKILL.md
+  codex: agents/codex/skills/conversation-engine-persistent-session-state/SKILL.md
+  claude_code: agents/claude-code/skills/conversation-engine-persistent-session-state/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated

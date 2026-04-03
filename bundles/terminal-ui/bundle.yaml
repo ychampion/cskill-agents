@@ -1,0 +1,11 @@
+id: terminal-ui
+name: "Terminal UI"
+description: "Terminal framing, style preservation, responsive status rows, and motion-aware feedback."
+skills:
+  - ansi-safe-border-caption-embedding
+  - wrapped-text-style-preservation
+  - capability-based-spinner-glyph-selection
+  - progressive-width-gated-status-rows
+  - reduced-motion-first-terminal-animation
+  - viewport-aware-animation-pausing
+  - scrollback-freeze-optimization

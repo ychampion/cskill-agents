@@ -1,0 +1,23 @@
+slug: user-invocable-capability-serialization
+name: "User-Invocable Capability Serialization"
+summary: "Serialize announced command and skill surfaces from a shared capability shape, excluding entries explicitly marked non-user-invocable."
+when_to_use: "Use when a session-init payload or capability announcement is projecting commands, skills, or similar affordances into a user-visible surface and some registry entries are internal-only."
+category: remote-bridge
+maturity: recommended
+tags:
+  - remote-bridge
+  - agent-runtime
+bundles:
+  - remote-bridge
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/user-invocable-capability-serialization/SKILL.md
+  codex: agents/codex/skills/user-invocable-capability-serialization/SKILL.md
+  claude_code: agents/claude-code/skills/user-invocable-capability-serialization/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: remote-bridge
+  review_status: curated

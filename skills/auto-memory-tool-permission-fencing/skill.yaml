@@ -1,0 +1,23 @@
+slug: auto-memory-tool-permission-fencing
+name: "Auto Memory Tool Permission Fencing"
+summary: "Gate every tool call in the auto-memory extract agent so only safe read-only actions and targeted writes execute."
+when_to_use: "Apply whenever a background auto-memory agent must be limited to safe read-only commands and writes that target the memory directory."
+category: safety-worktrees
+maturity: recommended
+tags:
+  - safety-worktrees
+  - agent-runtime
+bundles:
+  - safety-worktrees
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/auto-memory-tool-permission-fencing/SKILL.md
+  codex: agents/codex/skills/auto-memory-tool-permission-fencing/SKILL.md
+  claude_code: agents/claude-code/skills/auto-memory-tool-permission-fencing/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: safety-worktrees
+  review_status: curated

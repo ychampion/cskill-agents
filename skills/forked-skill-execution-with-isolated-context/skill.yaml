@@ -1,0 +1,23 @@
+slug: forked-skill-execution-with-isolated-context
+name: "Forked Skill Execution With Isolated Context"
+summary: "Run SkillTool slash commands inside a forked sub-agent so the skill has isolated budget, telemetry, and lifecycle."
+when_to_use: "Load this skill when SkillTool needs to wrap a prompt command marked with `context:'fork'` into a sub-agent run that cannot touch the parent session state."
+category: multi-agent
+maturity: recommended
+tags:
+  - multi-agent
+  - agent-runtime
+bundles:
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/forked-skill-execution-with-isolated-context/SKILL.md
+  codex: agents/codex/skills/forked-skill-execution-with-isolated-context/SKILL.md
+  claude_code: agents/claude-code/skills/forked-skill-execution-with-isolated-context/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

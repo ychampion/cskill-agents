@@ -1,0 +1,13 @@
+id: command-surfaces
+name: "Command Surfaces"
+description: "Skill discovery, command registries, listing gates, and capability-surface shaping."
+skills:
+  - portable-skill-loader-progressive-disclosure
+  - project-root-scoped-local-skill-loading
+  - memoized-command-source-aggregation
+  - dynamic-skill-insertion-before-builtins
+  - layered-command-cache-invalidation
+  - descriptive-skill-surface-admission
+  - slash-command-skill-classification-filter
+  - budget-aware-skill-listing-formatting
+  - local-and-mcp-skill-name-deduplication

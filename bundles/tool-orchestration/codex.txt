@@ -1,0 +1,11 @@
+agents/codex/skills/concurrency-safe-tool-batching
+agents/codex/skills/ordered-streaming-tool-execution
+agents/codex/skills/progress-first-tool-emission
+agents/codex/skills/circular-safe-tool-registry-loading
+agents/codex/skills/capability-pool-resolution
+agents/codex/skills/required-argument-aware-flag-validation
+agents/codex/skills/idempotent-tool-result-persistence
+agents/codex/skills/modality-preserving-binary-offload
+agents/codex/skills/wire-shape-aligned-budgeting
+agents/codex/skills/tail-preserving-task-output-truncation
+agents/codex/skills/decision-fate-freezing

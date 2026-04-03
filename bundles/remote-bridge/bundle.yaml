@@ -1,0 +1,11 @@
+id: remote-bridge
+name: "Remote And Bridge"
+description: "Remote-safe command surfaces, bridge transport rules, and capability-advertising contracts."
+skills:
+  - bridge-origin-safe-slash-override
+  - type-tiered-bridge-command-gating
+  - bridge-safe-command-advertising
+  - user-invocable-capability-serialization
+  - shared-system-init-shape-parity
+  - privacy-redacted-repl-bridge-system-init
+  - legacy-wire-name-compat-translation

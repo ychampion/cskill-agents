@@ -1,0 +1,23 @@
+slug: decision-fate-freezing
+name: "Decision Fate Freezing"
+summary: "Freeze each tool result ID's replacement fate after it is observed so budget decisions stay deterministic across turns and forks."
+when_to_use: "Apply when the message-level replacement budget runs and you need previously seen tool results to keep the same fate (persisted preview vs full content) even after resumes, forks, or cached prompts."
+category: tool-orchestration
+maturity: recommended
+tags:
+  - tool-orchestration
+  - agent-runtime
+bundles:
+  - tool-orchestration
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/decision-fate-freezing/SKILL.md
+  codex: agents/codex/skills/decision-fate-freezing/SKILL.md
+  claude_code: agents/claude-code/skills/decision-fate-freezing/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: tool-orchestration
+  review_status: curated

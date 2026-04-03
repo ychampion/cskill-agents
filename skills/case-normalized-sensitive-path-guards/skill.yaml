@@ -1,0 +1,23 @@
+slug: case-normalized-sensitive-path-guards
+name: "Case-Normalized Sensitive Path Guards"
+summary: "Normalize filesystem paths and reject matches that try to spoof sensitive directories with mixed case or alternate separators."
+when_to_use: "Use this whenever user input targets `.claude`, dotfiles, or other dangerous locations on case-insensitive filesystems (Windows/macos)."
+category: safety-worktrees
+maturity: recommended
+tags:
+  - safety-worktrees
+  - agent-runtime
+bundles:
+  - safety-worktrees
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/case-normalized-sensitive-path-guards/SKILL.md
+  codex: agents/codex/skills/case-normalized-sensitive-path-guards/SKILL.md
+  claude_code: agents/claude-code/skills/case-normalized-sensitive-path-guards/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: safety-worktrees
+  review_status: curated

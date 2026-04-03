@@ -1,0 +1,23 @@
+slug: progressive-width-gated-status-rows
+name: "Progressive Width Gated Status Rows"
+summary: "Show status metadata only when the spinner row has room, shrinking entries as viewport width decreases."
+when_to_use: "Apply this when terminal status rows need to show token counters, timers, and thinking text but must drop elements as available width shrinks."
+category: terminal-ui
+maturity: recommended
+tags:
+  - terminal-ui
+  - agent-runtime
+bundles:
+  - terminal-ui
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/progressive-width-gated-status-rows/SKILL.md
+  codex: agents/codex/skills/progressive-width-gated-status-rows/SKILL.md
+  claude_code: agents/claude-code/skills/progressive-width-gated-status-rows/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: terminal-ui
+  review_status: curated

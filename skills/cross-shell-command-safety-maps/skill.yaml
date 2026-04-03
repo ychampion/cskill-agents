@@ -1,0 +1,23 @@
+slug: cross-shell-command-safety-maps
+name: "Cross Shell Command Safety Maps"
+summary: "Describe how to centralize cross-platform safe commands, UNC detection, and per-shell path guards so every shell tool shares the same policy."
+when_to_use: "Apply this when you need to enforce identical permissions across bash/PowerShell, detect UNC paths, and keep dangerous config files hidden to both shells."
+category: safety-worktrees
+maturity: recommended
+tags:
+  - safety-worktrees
+  - agent-runtime
+bundles:
+  - safety-worktrees
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/cross-shell-command-safety-maps/SKILL.md
+  codex: agents/codex/skills/cross-shell-command-safety-maps/SKILL.md
+  claude_code: agents/claude-code/skills/cross-shell-command-safety-maps/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: safety-worktrees
+  review_status: curated

@@ -1,0 +1,7 @@
+agents/codex/skills/ansi-safe-border-caption-embedding
+agents/codex/skills/wrapped-text-style-preservation
+agents/codex/skills/capability-based-spinner-glyph-selection
+agents/codex/skills/progressive-width-gated-status-rows
+agents/codex/skills/reduced-motion-first-terminal-animation
+agents/codex/skills/viewport-aware-animation-pausing
+agents/codex/skills/scrollback-freeze-optimization

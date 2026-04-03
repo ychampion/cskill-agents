@@ -1,0 +1,23 @@
+slug: cache-prefix-stability-for-subagents
+name: "Cache Prefix Stability For Subagents"
+summary: "Preserve cache-critical request fields when a child agent must share the parent's prompt prefix for cache hits."
+when_to_use: "Apply when a subagent should share the parent's cached prompt prefix instead of recomputing a divergent request shape."
+category: multi-agent
+maturity: recommended
+tags:
+  - multi-agent
+  - agent-runtime
+bundles:
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/cache-prefix-stability-for-subagents/SKILL.md
+  codex: agents/codex/skills/cache-prefix-stability-for-subagents/SKILL.md
+  claude_code: agents/claude-code/skills/cache-prefix-stability-for-subagents/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

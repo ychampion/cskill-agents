@@ -1,0 +1,23 @@
+slug: time-gap-cache-expiry-microcompact
+name: "Time-Gap Cache-Expiry Microcompact"
+summary: "When a long idle gap means the server cache is cold, clear old tool-result content before the next request instead of attempting warm-cache cache edits."
+when_to_use: "Apply when a long gap since the last assistant response implies the prompt cache has expired and cache-editing no longer makes sense."
+category: context-management
+maturity: recommended
+tags:
+  - context-management
+  - agent-runtime
+bundles:
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/time-gap-cache-expiry-microcompact/SKILL.md
+  codex: agents/codex/skills/time-gap-cache-expiry-microcompact/SKILL.md
+  claude_code: agents/claude-code/skills/time-gap-cache-expiry-microcompact/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated

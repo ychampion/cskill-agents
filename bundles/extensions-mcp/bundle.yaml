@@ -1,0 +1,6 @@
+id: extensions-mcp
+name: "Extensions And MCP"
+description: "Extension sync and parity patterns for plugin and MCP-backed systems."
+skills:
+  - three-layer-extension-sync
+  - headless-interactive-reconcile-parity

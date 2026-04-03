@@ -1,0 +1,23 @@
+slug: type-tiered-bridge-command-gating
+name: "Type Tiered Bridge Command Gating"
+summary: "Gate bridge-executed slash commands by command type first: block local-jsx UI commands, allow prompt commands by construction, and require an explicit allowlist for plain local commands."
+when_to_use: "Use when a remote or bridged client can invoke slash commands and you need a simple safety rule that separates text-expanding commands from local UI commands and plain local actions."
+category: remote-bridge
+maturity: recommended
+tags:
+  - remote-bridge
+  - agent-runtime
+bundles:
+  - remote-bridge
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/type-tiered-bridge-command-gating/SKILL.md
+  codex: agents/codex/skills/type-tiered-bridge-command-gating/SKILL.md
+  claude_code: agents/claude-code/skills/type-tiered-bridge-command-gating/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: remote-bridge
+  review_status: curated

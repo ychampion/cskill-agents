@@ -1,0 +1,25 @@
+slug: capability-based-spinner-glyph-selection
+name: "Capability Based Spinner Glyph Selection"
+summary: "Select spinner glyphs and colors dynamically based on terminal capability, motion preference, and stall state."
+when_to_use: "Use when building a spinner glyph that must adapt to reduced-motion settings, theme colors, and stalled intensity while keeping the animation loop small."
+category: terminal-ui
+maturity: core
+tags:
+  - terminal-ui
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - terminal-ui
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/capability-based-spinner-glyph-selection/SKILL.md
+  codex: agents/codex/skills/capability-based-spinner-glyph-selection/SKILL.md
+  claude_code: agents/claude-code/skills/capability-based-spinner-glyph-selection/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: terminal-ui
+  review_status: curated

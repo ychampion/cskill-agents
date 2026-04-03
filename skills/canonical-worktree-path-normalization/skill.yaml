@@ -1,0 +1,23 @@
+slug: canonical-worktree-path-normalization
+name: "Canonical Worktree Path Normalization"
+summary: "Resolve repo-relative paths against the canonical checkout root so shared state stays stable across Git worktrees."
+when_to_use: "Use when repo-relative paths are written into shared or user-global state and the same project may be opened from multiple worktrees."
+category: safety-worktrees
+maturity: recommended
+tags:
+  - safety-worktrees
+  - agent-runtime
+bundles:
+  - safety-worktrees
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/canonical-worktree-path-normalization/SKILL.md
+  codex: agents/codex/skills/canonical-worktree-path-normalization/SKILL.md
+  claude_code: agents/claude-code/skills/canonical-worktree-path-normalization/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: safety-worktrees
+  review_status: curated

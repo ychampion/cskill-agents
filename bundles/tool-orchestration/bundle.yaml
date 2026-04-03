@@ -1,0 +1,15 @@
+id: tool-orchestration
+name: "Tool Orchestration"
+description: "Tool batching, streaming, persistence, validation, and output-budget control."
+skills:
+  - concurrency-safe-tool-batching
+  - ordered-streaming-tool-execution
+  - progress-first-tool-emission
+  - circular-safe-tool-registry-loading
+  - capability-pool-resolution
+  - required-argument-aware-flag-validation
+  - idempotent-tool-result-persistence
+  - modality-preserving-binary-offload
+  - wire-shape-aligned-budgeting
+  - tail-preserving-task-output-truncation
+  - decision-fate-freezing

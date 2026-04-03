@@ -1,0 +1,25 @@
+slug: idempotent-tool-result-persistence
+name: "Idempotent Tool Result Persistence"
+summary: "Persist tool results once, avoid re-writing duplicates, and summarize via previews so long outputs stay accessible yet capped."
+when_to_use: "Use this when tool result blocks exceed their configured thresholds and you want to persist them once while still returning a preview."
+category: tool-orchestration
+maturity: core
+tags:
+  - tool-orchestration
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - tool-orchestration
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/idempotent-tool-result-persistence/SKILL.md
+  codex: agents/codex/skills/idempotent-tool-result-persistence/SKILL.md
+  claude_code: agents/claude-code/skills/idempotent-tool-result-persistence/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: tool-orchestration
+  review_status: curated

@@ -1,0 +1,15 @@
+id: multi-agent
+name: "Multi-Agent"
+description: "Subagent tool surfaces, fork control, lifecycle cleanup, and isolation patterns."
+skills:
+  - additive-agent-tool-surface-construction
+  - agent-specific-mcp-server-initialization
+  - cache-prefix-stability-for-subagents
+  - cache-identical-fork-prefix-construction
+  - permission-overlay-inheritance
+  - fork-child-directive-guardrails
+  - lifecycle-scoped-resource-cleanup
+  - forked-skill-execution-with-isolated-context
+  - append-only-sidechain-transcripts
+  - trusted-frontmatter-gating
+  - orphaned-tool-call-sanitizer

@@ -1,0 +1,23 @@
+slug: orphaned-tool-call-sanitizer
+name: "Orphaned Tool Call Sanitizer"
+summary: "Remove assistant messages that reference tools without recorded results before feeding the history back into runAgent."
+when_to_use: "When replaying history for a subagent, make sure assistant tool_use blocks never refer to tool_use_ids that lack results."
+category: multi-agent
+maturity: recommended
+tags:
+  - multi-agent
+  - agent-runtime
+bundles:
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/orphaned-tool-call-sanitizer/SKILL.md
+  codex: agents/codex/skills/orphaned-tool-call-sanitizer/SKILL.md
+  claude_code: agents/claude-code/skills/orphaned-tool-call-sanitizer/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

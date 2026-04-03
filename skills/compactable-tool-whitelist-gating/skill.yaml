@@ -1,0 +1,23 @@
+slug: compactable-tool-whitelist-gating
+name: "Compactable Tool Whitelist Gating"
+summary: "Only allow cached microcompact to delete tool results for a vetted, pre-gated whitelist of tool names."
+when_to_use: "Apply when cache-editing compacts conversation transcripts and must avoid deleting outputs from tools that cannot be safely re-run or are non-text."
+category: context-management
+maturity: recommended
+tags:
+  - context-management
+  - agent-runtime
+bundles:
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/compactable-tool-whitelist-gating/SKILL.md
+  codex: agents/codex/skills/compactable-tool-whitelist-gating/SKILL.md
+  claude_code: agents/claude-code/skills/compactable-tool-whitelist-gating/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated

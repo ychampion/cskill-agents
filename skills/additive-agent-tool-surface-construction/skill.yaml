@@ -1,0 +1,25 @@
+slug: additive-agent-tool-surface-construction
+name: "Additive Agent Tool Surface Construction"
+summary: "Merge agent-specific tool sets (MCP clients + fetched tools) into the parent context without disrupting the parent’s existing pool."
+when_to_use: "Use this when bringing tools from newly connected MCP servers into the agent’s tool pool while preserving the parent context."
+category: multi-agent
+maturity: core
+tags:
+  - multi-agent
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/additive-agent-tool-surface-construction/SKILL.md
+  codex: agents/codex/skills/additive-agent-tool-surface-construction/SKILL.md
+  claude_code: agents/claude-code/skills/additive-agent-tool-surface-construction/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

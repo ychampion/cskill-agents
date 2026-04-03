@@ -1,0 +1,23 @@
+slug: modality-preserving-binary-offload
+name: "Modality-Preserving Binary Offload"
+summary: "Persist binary output with a mime-derived extension and a matching saved-file message so downstream tools keep the right modality."
+when_to_use: "Apply when a tool emits binary content that must be saved out of band without losing the file type or downstream usability."
+category: tool-orchestration
+maturity: recommended
+tags:
+  - tool-orchestration
+  - agent-runtime
+bundles:
+  - tool-orchestration
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/modality-preserving-binary-offload/SKILL.md
+  codex: agents/codex/skills/modality-preserving-binary-offload/SKILL.md
+  claude_code: agents/claude-code/skills/modality-preserving-binary-offload/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: tool-orchestration
+  review_status: curated

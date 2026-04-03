@@ -1,0 +1,7 @@
+agents/codex/skills/bridge-origin-safe-slash-override
+agents/codex/skills/type-tiered-bridge-command-gating
+agents/codex/skills/bridge-safe-command-advertising
+agents/codex/skills/user-invocable-capability-serialization
+agents/codex/skills/shared-system-init-shape-parity
+agents/codex/skills/privacy-redacted-repl-bridge-system-init
+agents/codex/skills/legacy-wire-name-compat-translation

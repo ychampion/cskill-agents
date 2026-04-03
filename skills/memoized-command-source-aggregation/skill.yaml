@@ -1,0 +1,25 @@
+slug: memoized-command-source-aggregation
+name: "Memoized Command Source Aggregation"
+summary: "Load independent command sources in parallel, then memoize the merged registry by cwd so repeated lookups stay cheap and ordered."
+when_to_use: "Use when a command or skill registry must combine several expensive sources, but repeated lookups from the same workspace should reuse one stable merged result."
+category: command-surfaces
+maturity: core
+tags:
+  - command-surfaces
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - command-surfaces
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/memoized-command-source-aggregation/SKILL.md
+  codex: agents/codex/skills/memoized-command-source-aggregation/SKILL.md
+  claude_code: agents/claude-code/skills/memoized-command-source-aggregation/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: command-surfaces
+  review_status: curated

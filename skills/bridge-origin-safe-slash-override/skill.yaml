@@ -1,0 +1,25 @@
+slug: bridge-origin-safe-slash-override
+name: "Bridge Origin Safe Slash Override"
+summary: "Keep remote slash-command skipping enabled by default, then reopen it only for bridge-safe commands while denying unsafe local commands with a friendly local response."
+when_to_use: "Apply when remotely delivered input should still default to plain-text slash handling, but a trusted bridge path needs to selectively re-enable only the slash commands that are safe to execute remotely."
+category: remote-bridge
+maturity: core
+tags:
+  - remote-bridge
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - remote-bridge
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/bridge-origin-safe-slash-override/SKILL.md
+  codex: agents/codex/skills/bridge-origin-safe-slash-override/SKILL.md
+  claude_code: agents/claude-code/skills/bridge-origin-safe-slash-override/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: remote-bridge
+  review_status: curated

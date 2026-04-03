@@ -1,0 +1,23 @@
+slug: wire-shape-aligned-budgeting
+name: "Wire-Shape Aligned Budgeting"
+summary: "Keep each wire message’s aggregate tool_result size within the configured budget by compacting the largest fresh results first."
+when_to_use: "Apply this when building user messages that include multiple `tool_result` blocks to ensure the total stays under `MAX_TOOL_RESULTS_PER_MESSAGE_CHARS` before the API call."
+category: tool-orchestration
+maturity: recommended
+tags:
+  - tool-orchestration
+  - agent-runtime
+bundles:
+  - tool-orchestration
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/wire-shape-aligned-budgeting/SKILL.md
+  codex: agents/codex/skills/wire-shape-aligned-budgeting/SKILL.md
+  claude_code: agents/claude-code/skills/wire-shape-aligned-budgeting/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: tool-orchestration
+  review_status: curated

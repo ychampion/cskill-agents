@@ -1,0 +1,25 @@
+slug: api-round-message-grouping
+name: "API Round Message Grouping"
+summary: "Split conversation history into API-round buckets so compaction retries cut only the chunks tied to the failed round."
+when_to_use: "When compacting or retrying requests, use API-round boundaries instead of human-turn heuristics to determine what past messages belong together."
+category: context-management
+maturity: core
+tags:
+  - context-management
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/api-round-message-grouping/SKILL.md
+  codex: agents/codex/skills/api-round-message-grouping/SKILL.md
+  claude_code: agents/claude-code/skills/api-round-message-grouping/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated

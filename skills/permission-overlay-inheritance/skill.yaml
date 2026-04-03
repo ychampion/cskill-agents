@@ -1,0 +1,25 @@
+slug: permission-overlay-inheritance
+name: "Permission Overlay Inheritance"
+summary: "Layer child permission rules over parent session policy without dropping root-level grants or mutating shared state."
+when_to_use: "Apply when a subagent or nested workflow needs a narrower permission contract but must still inherit the parent session's top-level grants."
+category: multi-agent
+maturity: core
+tags:
+  - multi-agent
+  - agent-runtime
+  - starter
+bundles:
+  - starter
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/permission-overlay-inheritance/SKILL.md
+  codex: agents/codex/skills/permission-overlay-inheritance/SKILL.md
+  claude_code: agents/claude-code/skills/permission-overlay-inheritance/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

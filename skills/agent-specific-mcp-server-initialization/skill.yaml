@@ -1,0 +1,23 @@
+slug: agent-specific-mcp-server-initialization
+name: "Agent-Specific MCP Server Initialization"
+summary: "Connect each agent’s frontmatter MCP servers safely and tear them down without leaking clients, while honoring plugin-only guards."
+when_to_use: "Load this skill when an agent defines extra MCP servers in its frontmatter and those clients must be joined to the parent session."
+category: multi-agent
+maturity: recommended
+tags:
+  - multi-agent
+  - agent-runtime
+bundles:
+  - multi-agent
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/agent-specific-mcp-server-initialization/SKILL.md
+  codex: agents/codex/skills/agent-specific-mcp-server-initialization/SKILL.md
+  claude_code: agents/claude-code/skills/agent-specific-mcp-server-initialization/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: multi-agent
+  review_status: curated

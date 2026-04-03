@@ -1,0 +1,23 @@
+slug: viewport-aware-animation-pausing
+name: "Viewport-Aware Animation Pausing"
+summary: "Stop updating animation ticks as soon as the animated element leaves the viewport so scrollback never forces terminal resets."
+when_to_use: "Deploy animations that pause as soon as their viewport flags `isVisible` false."
+category: terminal-ui
+maturity: recommended
+tags:
+  - terminal-ui
+  - agent-runtime
+bundles:
+  - terminal-ui
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/viewport-aware-animation-pausing/SKILL.md
+  codex: agents/codex/skills/viewport-aware-animation-pausing/SKILL.md
+  claude_code: agents/claude-code/skills/viewport-aware-animation-pausing/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: terminal-ui
+  review_status: curated

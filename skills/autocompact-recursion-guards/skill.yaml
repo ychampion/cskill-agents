@@ -1,0 +1,23 @@
+slug: autocompact-recursion-guards
+name: "Autocompact Recursion Guards"
+summary: "Block autocompact from running in recursive contexts so forks and helpers don’t deadlock."
+when_to_use: "Apply when auto-compacting logic runs inside recursive agents (session memory, compact helpers, context collapse) and must avoid deadlocking by re-entering itself."
+category: context-management
+maturity: recommended
+tags:
+  - context-management
+  - agent-runtime
+bundles:
+  - context-management
+targets:
+  - universal
+  - codex-compatible
+  - claude-code-compatible
+paths:
+  universal: skills/autocompact-recursion-guards/SKILL.md
+  codex: agents/codex/skills/autocompact-recursion-guards/SKILL.md
+  claude_code: agents/claude-code/skills/autocompact-recursion-guards/SKILL.md
+source:
+  type: reviewed-implementation
+  pattern_family: context-management
+  review_status: curated
